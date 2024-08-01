@@ -7,16 +7,22 @@ export default {
   theme: {
     extend: {
       animation: {
-        marquee: "marquee 10s linear infinite",
+        marquee: "marquee 20s linear infinite",
       },
       keyframes: {
         marquee: {
-          from: {
+          '0%': {
             transform: 'translateX(0)',
           },
-          to: {
-            transform: 'translateX(calc(-100% - 2.5rem))',
+          '25%': {
+            transform: 'translateX(calc(-100% - 2.5rem))',//
           },
+          '75%': {
+            transform: 'translateX(calc(100% - 2.5rem))',
+          },
+          '100%': {
+            transform: 'translateX(0)',
+          }
         }
       }
     },
