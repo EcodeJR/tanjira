@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-    font-family: "Domine", sans-serif;
+    font-family: "Space Grotesk", sans-serif;
     box-sizing: border-box;
     scroll-behavior: smooth;
   }

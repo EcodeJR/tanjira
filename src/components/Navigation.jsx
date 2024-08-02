@@ -30,28 +30,28 @@ const Navigation = () => {
     </ul> ;
 
     return(
-        <nav className='w-full h-fit py-5 px-3 flex items-end md:items-center justify-between bg-white/5 relative'>
+        <nav className='w-full h-fit py-5 px-3 flex items-end md:items-center justify-between bg-black/5 relative scroll-smooth'>
             <div className='flex items-end justify-center'>
                 <img src={logo} alt="Tanjira's Logo." className='w-[40px] md:w-[50px] lg:w-[50px]' />
-                <h1 className='text-white font-extrabold text-lg md:text-xl lg:text-2xl'>TANJIRA</h1>
+                <h1 className='text-[#3c2848] font-extrabold text-lg md:text-xl lg:text-2xl'>TANJIRA</h1>
             </div>
-            <ul className='hidden md:flex items-center justify-around md:w-[70%] lg:w-[60%] text-white uppercase'>
+            <ul className='hidden md:flex items-center justify-around md:w-[70%] lg:w-[60%] text-[#3c2848] uppercase'>
                 {
                     Links.map(link => (
-                        <li key={link.id}><a href={link.value} className='font-semibold text-base text-gray-400 hover:text-white'>{link.name}</a></li>
+                        <li key={link.id}><a href={link.value} className='font-semibold text-base hover:text-[#3c2848]/40 delay-75 ease-in-out'>{link.name}</a></li>
                     ))
                 }
-                <div className='flex items-center justify-center hover:text-[#6f1112]'>
-                    <a href='#contact' className='font-bold text-lg mx-1'>Get in Touch</a>
+                <div className='flex items-center justify-center px-2 py-3 rounded-3xl hover:text-white hover:bg-gradient-to-r hover:from-[#ff9e01] hover:via-[#6f1112] hover:to-[#fc210d] duration-75 ease-in-out delay-75'>
+                    <a href='#contact' className='font-extrabold text-lg mx-1'>Get in Touch</a>
                     <MdArrowOutward className='font-extrabold text-xl mx-1' />
                 </div>
             </ul>
             {
                 smallscreen ? SmallNav : null
             }
-            <div className='flex items-end justify-center md:hidden'>
+            <div className='flex items-end justify-center md:hidden scroll-smooth'>
                 {
-                    smallscreen ? <button onClick={toggleNav} className='md:hidden text-base text-white font-bold uppercase'>Close</button> : <button onClick={toggleNav} className='md:hidden text-base text-white font-bold uppercase'>Menu</button>
+                    smallscreen ? <button onClick={toggleNav} className='md:hidden text-base text-[#3c2848] font-bold uppercase'>Close</button> : <button onClick={toggleNav} className='md:hidden text-base text-[#3c2848] font-bold uppercase'>Menu</button>
                 }
                 
             </div>
