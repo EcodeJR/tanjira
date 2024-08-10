@@ -2,7 +2,121 @@ import block from '../assets/block_val.jpeg';
 import edu_onboard from '../assets/edu_onboard.jpeg';
 import community from '../assets/community.jpeg';
 import charity from '../assets/charity.jpeg';
+import { useRef, useEffect } from 'react';
+import {gsap, Power1} from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(Power1);
+
+
+
 const Services = () => {
+
+    const serImg = useRef(null);
+    const serText = useRef(null);
+    const serImg1 = useRef(null);
+    const serText1 = useRef(null);
+    const serImg2 = useRef(null);
+    const serText2 = useRef(null);
+    const serImg3 = useRef(null);
+    const serText3 = useRef(null);
+
+
+    useEffect(() => {
+        gsap.fromTo(serImg.current, 
+          { x: -100, opacity: 0 }, // from values
+          { x: 0, opacity: 1, duration: 1, ease: "power1.inOut",
+            scrollTrigger: {
+              trigger: serImg.current, // element to trigger animation
+              start: "top 80%",
+              end: "bottom top",
+              toggleActions: "play pause resume none",
+            }
+           } // to values
+        );
+        gsap.fromTo(serText.current, 
+            { x: 100, opacity: 0 }, // from values
+            { x: 0, opacity: 1, duration: 1, ease: "power1.inOut",
+              scrollTrigger: {
+                trigger: serText.current, // element to trigger animation
+                start: "top 80%",
+                end: "bottom top",
+                toggleActions: "play pause resume none",
+              }
+             } // to values
+          );
+          gsap.fromTo(serImg1.current, 
+            { x: 100, opacity: 0 }, // from values
+            { x: 0, opacity: 1, duration: 1, ease: "power1.inOut",
+              scrollTrigger: {
+                trigger: serImg1.current, // element to trigger animation
+                start: "top 80%",
+                end: "bottom top",
+                toggleActions: "play pause resume none",
+              }
+             } // to values
+          );
+          gsap.fromTo(serText1.current, 
+            { x: -100, opacity: 0 }, // from values
+            { x: 0, opacity: 1, duration: 1, ease: "power1.inOut",
+              scrollTrigger: {
+                trigger: serText1.current, // element to trigger animation
+                start: "top 80%",
+                end: "bottom top",
+                toggleActions: "play pause resume none",
+              }
+             } // to values
+          );
+          gsap.fromTo(serImg2.current, 
+            { x: -100, opacity: 0 }, // from values
+            { x: 0, opacity: 1, duration: 1, ease: "power1.inOut",
+              scrollTrigger: {
+                trigger: serImg2.current, // element to trigger animation
+                start: "top 80%",
+                end: "bottom top",
+                toggleActions: "play pause resume none",
+              }
+             } // to values
+          );
+          gsap.fromTo(serText2.current, 
+            { x: 100, opacity: 0 }, // from values
+            { x: 0, opacity: 1, duration: 1, ease: "power1.inOut",
+              scrollTrigger: {
+                trigger: serText2.current, // element to trigger animation
+                start: "top 80%",
+                end: "bottom top",
+                toggleActions: "play pause resume none",
+              }
+             } // to values
+          );
+          gsap.fromTo(serImg3.current, 
+            { x: 100, opacity: 0 }, // from values
+            { x: 0, opacity: 1, duration: 1, ease: "power1.inOut",
+              scrollTrigger: {
+                trigger: serImg3.current, // element to trigger animation
+                start: "top 80%",
+                end: "bottom top",
+                toggleActions: "play pause resume none",
+              }
+             } // to values
+          );
+          gsap.fromTo(serText3.current, 
+            { x: -100, opacity: 0 }, // from values
+            { x: 0, opacity: 1, duration: 1, ease: "power1.inOut",
+              scrollTrigger: {
+                trigger: serText3.current, // element to trigger animation
+                start: "top 80%",
+                end: "bottom top",
+                toggleActions: "play pause resume none",
+              }
+             } // to values
+          );
+    
+        }, [])
+
+
+
     return ( 
         <section id='services' className="bg-transparent scroll-smooth">
             <h2 className="font-bold text-3xl md:text-4xl lg:text-6xl bg-clip-text text-[#3c2848] text-center tracking-wide uppercase">Our Services</h2>
@@ -10,8 +124,8 @@ const Services = () => {
 
                 {/* Blockchain Validation section */}
                 <div className='flex flex-col md:flex-row items-center justify-between py-10'>
-                    <img className='w-[100%] md:w-[30%] mx-0 md:mx-auto' src={block} alt="A representation of blocks on the blockchain" />
-                    <div className='text-[#3c2848] w-full md:w-[50%] flex items-start justify-center flex-col my-5 md:my-0 mx-auto px-5'>
+                    <img className='w-[100%] md:w-[30%] mx-0 md:mx-auto' src={block} alt="A representation of blocks on the blockchain" ref={serImg} />
+                    <div className='text-[#3c2848] w-full md:w-[50%] flex items-start justify-center flex-col my-5 md:my-0 mx-auto px-5' ref={serText}>
                         <h3 className="text-3xl md:text-3xl lg:text-5xl font-bold text-center md:text-start mx-auto md:mx-0">Blockchain <br /> Validation</h3>
                         <p className='pr-3 text-center md:text-left w-[100%] md:w-[80%] text-base text-gray-600 py-2'>Blockchain validation is the process of ensuring the integrity and security of a blockchain network. As a validator, your commitment is crucial for maintaining the network`&apos`s stability.</p>
                         <details className='w-[90vw] md:w-[40vw] h-fit bg-black/10 p-3 my-2'>
@@ -36,7 +150,7 @@ const Services = () => {
                 {/* Education and Onboarding section */}
                 <div className='flex flex-col-reverse md:flex-row items-center justify-between py-10'>
                     
-                    <div className='text-[#3c2848] w-full md:w-[50%] flex items-start justify-center flex-col my-5 md:my-0 mx-auto px-5'>
+                    <div className='text-[#3c2848] w-full md:w-[50%] flex items-start justify-center flex-col my-5 md:my-0 mx-auto px-5' ref={serText1}>
                         <h3 className="text-3xl md:text-3xl lg:text-5xl font-bold text-center md:text-start mx-auto md:mx-0">Education <br /> & Onboarding</h3>
                         <p className='pr-3 text-center md:text-left w-[100%] md:w-[80%] text-base text-gray-600 py-2'>Educating users and providing onboarding resources are essential for a thriving community.</p>
                         <details className='w-[90vw] md:w-[40vw] h-fit bg-black/10 p-3 my-2'>
@@ -53,15 +167,15 @@ const Services = () => {
                         </details>
                     </div>
 
-                    <img className='w-[100%] md:w-[30%] mx-0 md:mx-auto' src={edu_onboard} alt="A representation of blockchain education." />
+                    <img className='w-[100%] md:w-[30%] mx-0 md:mx-auto' src={edu_onboard} alt="A representation of blockchain education." ref={serImg1} />
                 </div>
 
 
                 {/* Community section */}
                 <div className='flex flex-col md:flex-row items-center justify-between py-10'>
-                    <img className='w-[100%] md:w-[30%] mx-0 md:mx-auto' src={community} alt="A representation of blockchain education." />
+                    <img className='w-[100%] md:w-[30%] mx-0 md:mx-auto' src={community} alt="A representation of blockchain education." ref={serImg2} />
 
-                    <div className='text-[#3c2848] w-full md:w-[50%] flex items-start justify-center flex-col my-5 md:my-0 mx-auto px-5'>
+                    <div className='text-[#3c2848] w-full md:w-[50%] flex items-start justify-center flex-col my-5 md:my-0 mx-auto px-5' ref={serText2}>
                         <h3 className="text-3xl md:text-3xl lg:text-5xl font-bold text-center md:text-start mx-auto md:mx-0">Community</h3>
                         <p className='pr-3 text-base text-center md:text-left w-[100%] text-gray-600 py-2'>Community Engagement.</p>
                         <details className='w-[90vw] md:w-[40vw] h-fit bg-black/10 p-3 my-2'>
@@ -79,7 +193,7 @@ const Services = () => {
                 {/* Charity section */}
                 <div className='flex flex-col-reverse md:flex-row items-center justify-between py-10'>
 
-                    <div className='text-[#3c2848] w-full md:w-[50%] flex items-start justify-center flex-col my-5 md:my-0 mx-auto px-5'>
+                    <div className='text-[#3c2848] w-full md:w-[50%] flex items-start justify-center flex-col my-5 md:my-0 mx-auto px-5' ref={serText3}>
                         <h3 className="text-3xl md:text-3xl lg:text-5xl font-bold text-center md:text-start mx-auto md:mx-0">Charity</h3>
                         <p className='pr-3 text-base text-center md:text-left w-[100%] text-gray-600 py-2'>Charitable Initiatives.</p>
                         <details className='w-[90vw] md:w-[40vw] h-fit bg-black/10 p-3 my-2'>
@@ -92,7 +206,7 @@ const Services = () => {
                         </details>
                     </div>
 
-                    <img className='w-[100%] md:w-[40%] mx-0 md:mx-auto' src={charity} alt="A representation of blockchain education." />
+                    <img className='w-[100%] md:w-[40%] mx-0 md:mx-auto' src={charity} alt="A representation of blockchain education." ref={serImg3} />
                 </div>
             </div>
         </section>
