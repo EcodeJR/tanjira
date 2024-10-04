@@ -1,7 +1,7 @@
 import block from '../assets/block_val.jpeg';
-import edu_onboard from '../assets/edu_onboard.jpeg';
-import community from '../assets/community.jpeg';
-import charity from '../assets/charity.jpeg';
+// import edu_onboard from '../assets/edu_onboard.jpeg';
+// import community from '../assets/community.jpeg';
+// import charity from '../assets/charity.jpeg';
 import { useRef, useEffect } from 'react';
 import {gsap, Power1} from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -121,6 +121,7 @@ const Services = () => {
         <section id='services' className="bg-transparent scroll-smooth">
             <h2 className="font-bold text-3xl md:text-4xl lg:text-6xl bg-clip-text text-[#3c2848] text-center tracking-wide uppercase">Our Services</h2>
             <div className="flex flex-col items-center justify-around py-5">
+              <h3 className="text-[#3c2848] text-lg md:text-xl px-4 md:px-6 py-3">At TANJIRA, we provide top-tier blockchain validation services designed to ensure the security, reliability, and decentralization of blockchain networks. As an experienced validator, we offer comprehensive solutions for both blockchain projects and individual token holders</h3>
 
                 {/* Blockchain Validation section */}
                 <div className='flex flex-col md:flex-row items-center justify-between py-10'>
@@ -148,9 +149,9 @@ const Services = () => {
                 </div>
 
                 {/* Education and Onboarding section */}
-                <div className='flex flex-col-reverse md:flex-row items-center justify-between py-10'>
+                <div className='flex flex-col md:flex-row items-center justify-between py-10'>
                     
-                    <div className='text-[#3c2848] w-full md:w-[50%] flex items-start justify-center flex-col my-5 md:my-0 mx-auto px-5' ref={serText1}>
+                    <div className='text-[#3c2848] w-full md:w-[40%] flex items-start justify-center flex-col my-5 md:my-0 mx-auto px-5' ref={serText1}>
                         <h3 className="text-3xl md:text-3xl lg:text-5xl font-bold text-center md:text-start mx-auto md:mx-0">Education <br /> & Onboarding</h3>
                         <p className='pr-3 text-center md:text-left w-[100%] md:w-[80%] text-base text-gray-600 py-2'>Educating users and providing onboarding resources are essential for a thriving community.</p>
                         <details className='w-[90vw] md:w-[40vw] h-fit bg-black/10 p-3 my-2'>
@@ -167,15 +168,8 @@ const Services = () => {
                         </details>
                     </div>
 
-                    <img className='w-[100%] md:w-[30%] mx-0 md:mx-auto' src={edu_onboard} alt="A representation of blockchain education." ref={serImg1} />
-                </div>
-
-
-                {/* Community section */}
-                <div className='flex flex-col md:flex-row items-center justify-between py-10'>
-                    <img className='w-[100%] md:w-[30%] mx-0 md:mx-auto' src={community} alt="A representation of blockchain education." ref={serImg2} />
-
-                    <div className='text-[#3c2848] w-full md:w-[50%] flex items-start justify-center flex-col my-5 md:my-0 mx-auto px-5' ref={serText2}>
+                    {/* <img className='w-[100%] md:w-[30%] mx-0 md:mx-auto' src={edu_onboard} alt="A representation of blockchain education." ref={serImg1} /> */}
+                    <div className='text-[#3c2848] w-full md:w-[40%] flex items-start justify-center flex-col my-5 md:my-0 mx-auto px-5' ref={serText2}>
                         <h3 className="text-3xl md:text-3xl lg:text-5xl font-bold text-center md:text-start mx-auto md:mx-0">Community</h3>
                         <p className='pr-3 text-base text-center md:text-left w-[100%] text-gray-600 py-2'>Community Engagement.</p>
                         <details className='w-[90vw] md:w-[40vw] h-fit bg-black/10 p-3 my-2'>
@@ -190,8 +184,16 @@ const Services = () => {
                 </div>
 
 
+                {/* Community section */}
+                <div className='flex flex-col md:flex-row items-center justify-between py-10'>
+                    {/* <img className='w-[100%] md:w-[30%] mx-0 md:mx-auto' src={community} alt="A representation of blockchain education." ref={serImg2} /> */}
+
+                    
+                </div>
+
+
                 {/* Charity section */}
-                <div className='flex flex-col-reverse md:flex-row items-center justify-between py-10'>
+                {/* <div className='flex flex-col-reverse md:flex-row items-center justify-between py-10'>
 
                     <div className='text-[#3c2848] w-full md:w-[50%] flex items-start justify-center flex-col my-5 md:my-0 mx-auto px-5' ref={serText3}>
                         <h3 className="text-3xl md:text-3xl lg:text-5xl font-bold text-center md:text-start mx-auto md:mx-0">Charity</h3>
@@ -207,7 +209,7 @@ const Services = () => {
                     </div>
 
                     <img className='w-[100%] md:w-[40%] mx-0 md:mx-auto' src={charity} alt="A representation of blockchain education." ref={serImg3} />
-                </div>
+                </div> */}
             </div>
         </section>
      );

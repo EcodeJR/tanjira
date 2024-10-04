@@ -31,7 +31,7 @@ const Home = () => {
     const [counters, setCounters] = useState([0, 0]);
     const countersRefs = [useRef(null), useRef(null)];
   
-    const finalValues = [20, 90]; // Final values for each counter
+    const finalValues = [1, 99]; // Final values for each counter
   
     useEffect(() => {
       const observer = new IntersectionObserver(
@@ -117,8 +117,10 @@ const Home = () => {
     return ( 
         <section className="w-full h-fit scroll-smooth overflow-x-hidden">
             <div className="w-full h-fit py-10">
-                <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold text-[#3c2848] text-center tracking-wider" ref={mainText1}>
-                    Web3 Block<br /> <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#ff9e01] via-[#6f1112] to-[#fc210d]">Validation</span> 
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#3c2848] uppercase text-center tracking-wider" ref={mainText1}>
+                    Earn<br /> <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#ff9e01] via-[#6f1112] to-[#fc210d]">Staking rewards</span> <br />
+                    through non-custodial staking <br />
+                    and Web3 infrastructure.
                 </h1>
             </div>
             <div className="w-full h-fit flex flex-col-reverse md:flex-wrap md:flex-row items-center justify-around p-3">
@@ -128,15 +130,15 @@ const Home = () => {
                         <p className='text-gray-500 text-base'>NETWORKS</p>
                     </div>
                     <div className="p-10 rounded-lg flex flex-col items-center justify-center border-[1px] border-black/5 bg-gray-500/10">
-                    <h1 className='text-[#3c2848] text-4xl md:text-5xl lg:text-5xl' ref={countersRefs[1]}>{counters[1]}%</h1>
-                    <p className='text-gray-500 text-base'>SUCCESS RATE</p>
+                      <h1 className='text-[#3c2848] text-4xl md:text-5xl lg:text-5xl' ref={countersRefs[1]}>{counters[1]}%</h1>
+                      <p className='text-gray-500 text-base'>UP TIME</p>
                     </div>
                 </div>
                 <div className='flex items-center justify-center my-4 md:my-0' ref={imageAni}>
                     <img src={homesvg} loading='lazy' alt="An NFT statue" className='w-[80%] md:w-[40vw]' />
                 </div>
                 <div className='flex flex-col items-center md:items-start justify-center md:w-[20vw]' ref={textAni}>
-                    <p className='text-base text-center md:text-left'>Our professional staking services support the future of decentralised ﬁnance, learning, trade etc.</p>
+                    <p className='text-base text-center md:text-left'>Our professional staking services support the future of decentralised blockchains.</p>
                     <span className='bg-gradient-to-r from-[#ff9e01] via-[#6f1112] to-[#fc210d] p-3 rounded-3xl cursor-pointer text-center text my-2 text-white font-bold hover:px-4 hover:delay-100 ease-in-out'><a href="#contact">Get Started</a></span>
                 </div>
             </div>
@@ -144,12 +146,12 @@ const Home = () => {
             <div className="pointer-events-none relative flex gap-10 overflow-hidden bg-black/10 py-2 my-20 h-[10vh] lg:h-[15vh] -skew-y-6" ref={maqueeAni}>
                 <div className="animate-marquee flex min-w-full shrink-0 items-center justify-around gap-10 text-[#3c2848] font-bold">
                 <h3 className='text-2xl'>BLOCKCHAIN</h3>
-                <FaStarOfLife className='font-bold text-3xl text-orange-600 px-3 w-10' />
-                <h3 className='text-2xl'>WEB3</h3>
+                {/* <FaStarOfLife className='font-bold text-3xl text-orange-600 px-3 w-10' />
+                <h3 className='text-2xl'>WEB3</h3> */}
                 <FaStarOfLife className='font-bold text-3xl text-orange-600 px-3 w-10' />
                 <h3 className='text-2xl'>dPoS</h3>
-                <FaStarOfLife className='font-bold text-3xl text-orange-600 px-3 w-10' />
-                <h3 className='text-2xl'>VERIFICATION</h3>
+                {/* <FaStarOfLife className='font-bold text-3xl text-orange-600 px-3 w-10' />
+                <h3 className='text-2xl'>VERIFICATION</h3> */}
                 <FaStarOfLife className='font-bold text-3xl text-orange-600 px-3 w-10' />
                 <h3 className='text-2xl'>LEARNING</h3>
                 <FaStarOfLife className='font-bold text-3xl text-orange-600 px-3 w-10' />
@@ -166,7 +168,7 @@ const Home = () => {
                         <img src={logo} alt="Tanjira's Logo." className='w-[40px] md:w-[50px] lg:w-[50px]' />
                         <h1 className='text-[#3c2848] font-extrabold text-lg md:text-xl lg:text-2xl'>TANJIRA</h1>
                     </div>
-                    <p className='text-[#3c2848] text-xs md:text-sm font-bold w-[30%] md:w-[20%]'>Our professional staking services support the future of decentralised ﬁnance, learning, trade etc.</p>
+                    <p className='text-[#3c2848] text-xs md:text-sm font-bold w-[30%] md:w-[20%]'>Our professional staking services support the future of decentralised blockchain.</p>
                 </div>
                 <hr className='w-[90%] h-[3px] bg-[#3c2848] opacity-40 rounded-lg my-4' />
                 <h5 className='text-[#3c2848] text-base text-center uppercase'>© tanjira 2024</h5>

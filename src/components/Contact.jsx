@@ -14,18 +14,18 @@ gsap.registerPlugin(Power1);
 
 
 const socials = [
-    {
-        icon: < FaFacebook className="text-3xl" />,
-        link: 'https//:link.com'
-    },
+    // {
+    //     icon: < FaFacebook className="text-3xl" />,
+    //     link: 'https//:link.com'
+    // },
     {
         icon: <FaXTwitter className="text-3xl" />,
         link: 'https//:link.com'
     },
-    {
-        icon: <FaSquareWhatsapp className="text-3xl" />,
-        link: 'https//:link.com'
-    },
+    // {
+    //     icon: <FaSquareWhatsapp className="text-3xl" />,
+    //     link: 'https//:link.com'
+    // },
     {
         icon: <FaDiscord className="text-3xl" />,
         link: 'https//:link.com'
@@ -120,7 +120,7 @@ const Contact = () => {
                 <p className="text-[#3c2848] text-sm md:text-base text-start w-[60vw] md:w-[40vw] py-4" ref={smallTextcont}>Tanjira are highly active in the communities we operate in. We are available 24/7 and provide free support helping community in ofﬁcial chats</p>
                 <ul className="px-4 py-2 list-disc my-4">
                     <li className="text-[#3c2848] text-base text-start py-1 flex items-center justify-start" ref={emailcont}><MdMarkEmailRead className="text-2xl" /> <a href="mailto: me@gmail.com" className="px-2 text-base md:text-xl font-bold uppercase">tanjiro@gmail.com</a></li>
-                    <li className="text-[#3c2848] text-base text-start py-1 flex items-center justify-start" ref={phonecont}><FaPhoneSquareAlt className="text-2xl" /> <a href="call: 07051242451" className="px-2 text-base md:text-xl font-bold uppercase">+2347051242451</a></li>
+                    {/* <li className="text-[#3c2848] text-base text-start py-1 flex items-center justify-start" ref={phonecont}><FaPhoneSquareAlt className="text-2xl" /> <a href="call: 07051242451" className="px-2 text-base md:text-xl font-bold uppercase">+2347051242451</a></li> */}
                 </ul>
                 <div className="gap-2 flex flex-wrap">
                     {
