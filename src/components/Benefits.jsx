@@ -55,11 +55,11 @@ const Benefits = () => {
 
     return ( 
         <section id="benefits" className="p-5 bg-transparent scroll-smooth">
-            <h2 className="font-bold text-3xl md:text-4xl lg:text-6xl text-[#3c2848] text-center tracking-wide uppercase">Our Benefits</h2>
+            <h2 className="font-bold text-4xl md:text-4xl lg:text-6xl text-[#3c2848] text-center tracking-wide uppercase">Our Benefits</h2>
             {/*cards container*/}
             <div className="w-full h-fit gap-10 flex flex-wrap items-center justify-evenly py-10 px-1 text-[#3c2848]">
                 {/*card 1*/}
-                <div className="w-[90%] md:max-w-[40vw] lg:w-[25vw] h-[80vh] flex flex-col items-center justify-center px-4 py-1 overflow-hidden" ref={card1}>
+                <div className="w-[90%] md:max-w-[40vw] lg:w-[25vw] h-fit flex flex-col items-center justify-center px-4 py-1 overflow-hidden" ref={card1}>
                     <div className="flex items-center justify-center">
                         <img src={security} alt="A security shield" className='w-[40vw] lg:w-[15vw]' />
                     </div>
@@ -76,7 +76,7 @@ const Benefits = () => {
                 </div>
 
                 {/*card 2*/}
-                <div className="w-[90%] md:max-w-[40vw] lg:w-[25vw] h-[80vh] flex flex-col items-center justify-center px-4 py-1 overflow-hidden" ref={card2}>
+                <div className="w-[90%] md:max-w-[40vw] lg:w-[25vw] h-fit flex flex-col items-center justify-center px-4 py-1 overflow-hidden" ref={card2}>
                     <div className="flex items-center justify-center">
                     <img src={education} alt="A book" className='w-[40vw] lg:w-[15vw]' />
                     </div>
@@ -92,7 +92,7 @@ const Benefits = () => {
                 </div>
 
                 {/*card 3*/}
-                <div className="w-[90%] md:max-w-[40vw] lg:w-[25vw] h-[80vh] flex flex-col items-center justify-around px-4 py-1 overflow-hidden" ref={card3}>
+                <div className="w-[90%] md:max-w-[40vw] lg:w-[25vw] h-fit flex flex-col items-center justify-around px-4 py-1 overflow-hidden" ref={card3}>
                     <div className="flex items-center justify-center">
                         <img src={charity} alt="A charity" className='w-[40vw] lg:w-[15vw]' />
                     </div>

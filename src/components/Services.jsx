@@ -119,19 +119,19 @@ const Services = () => {
 
     return ( 
         <section id='services' className="bg-transparent scroll-smooth">
-            <h2 className="font-bold text-3xl md:text-4xl lg:text-6xl bg-clip-text text-[#3c2848] text-center tracking-wide uppercase">Our Services</h2>
+            <h2 className="font-bold text-4xl md:text-4xl lg:text-6xl bg-clip-text text-[#3c2848] text-center tracking-wide uppercase">Our Services</h2>
             <div className="flex flex-col items-center justify-around py-5">
-              <h3 className="text-[#3c2848] text-lg md:text-xl px-4 md:px-6 py-3">At TANJIRA, we provide top-tier blockchain validation services designed to ensure the security, reliability, and decentralization of blockchain networks. As an experienced validator, we offer comprehensive solutions for both blockchain projects and individual token holders</h3>
+              <h3 className="text-[#3c2848] text-center text-md md:text-xl px-4 md:px-6 py-3">At TANJIRA, we provide top-tier blockchain validation services designed to ensure the security, reliability, and decentralization of blockchain networks. We offer comprehensive solutions for both blockchain projects and individual token holders</h3>
 
                 {/* Blockchain Validation section */}
-                <div className='flex flex-col md:flex-row items-center justify-between py-10'>
+                <div className='flex flex-col md:flex-row items-center justify-between py-4'>
                     <img className='w-[100%] md:w-[30%] mx-0 md:mx-auto' src={block} alt="A representation of blocks on the blockchain" ref={serImg} />
                     <div className='text-[#3c2848] w-full md:w-[50%] flex items-start justify-center flex-col my-5 md:my-0 mx-auto px-5' ref={serText}>
                         <h3 className="text-3xl md:text-3xl lg:text-5xl font-bold text-center md:text-start mx-auto md:mx-0">Blockchain <br /> Validation</h3>
-                        <p className='pr-3 text-center md:text-left w-[100%] md:w-[80%] text-base text-gray-600 py-2'>Blockchain validation is the process of ensuring the integrity and security of a blockchain network. As a validator, your commitment is crucial for maintaining the network`&apos`s stability.</p>
+                        <p className='pr-3 text-center md:text-left w-[100%] md:w-[80%] text-base text-gray-600 py-2'>Blockchain validation ensures the integrity and security of a blockchain network. As validators, our role is essential in keeping the network stable and trustworthy. Our dedication helps maintain the system's reliability for everyone involved.</p>
                         <details className='w-[90vw] md:w-[40vw] h-fit bg-black/10 p-3 my-2'>
                             <summary className='text-xl font-bold'>Security</summary>
-                            <p className='pl-5 text-base text-gray-600'>Emphasize how your validation process enhances the network`&apos`s security by verifying transactions and preventing malicious activity.</p>
+                            <p className='pl-5 text-base text-gray-600'>Emphasize how your validation process enhances the network's security by verifying transactions and preventing malicious activity.</p>
                         </details>
                         <details className='w-[90vw] md:w-[40vw] h-fit bg-black/10 p-3 my-2'>
                             <summary className='text-xl font-bold'>Consensus Mechanism</summary>
@@ -149,7 +149,7 @@ const Services = () => {
                 </div>
 
                 {/* Education and Onboarding section */}
-                <div className='flex flex-col md:flex-row items-center justify-between py-10'>
+                <div className='flex flex-col md:flex-row items-center justify-between py-2'>
                     
                     <div className='text-[#3c2848] w-full md:w-[40%] flex items-start justify-center flex-col my-5 md:my-0 mx-auto px-5' ref={serText1}>
                         <h3 className="text-3xl md:text-3xl lg:text-5xl font-bold text-center md:text-start mx-auto md:mx-0">Education <br /> & Onboarding</h3>

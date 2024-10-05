@@ -139,7 +139,7 @@ const Home = () => {
                 </div>
                 <div className='flex flex-col items-center md:items-start justify-center md:w-[20vw]' ref={textAni}>
                     <p className='text-base text-center md:text-left'>Our professional staking services support the future of decentralised blockchains.</p>
-                    <span className='bg-gradient-to-r from-[#ff9e01] via-[#6f1112] to-[#fc210d] p-3 rounded-3xl cursor-pointer text-center text my-2 text-white font-bold hover:px-4 hover:delay-100 ease-in-out'><a href="#contact">Get Started</a></span>
+                    <span className='bg-gradient-to-r from-[#ff9e01] via-[#6f1112] to-[#fc210d] p-3 rounded-3xl cursor-pointer text-center text my-2 text-white font-bold hover:shadow-lg hover:px-4 hover:delay-100 ease-in-out'><a href="#contact">Get Started</a></span>
                 </div>
             </div>
 

@@ -1,12 +1,12 @@
 import injective from '../assets/injective.svg';
-import chihuahua from '../assets/chihuahua.svg';
+// import chihuahua from '../assets/chihuahua.svg';
 import evmos from '../assets/evmos.svg';
-import firmachain from '../assets/firmachain.svg';
+// import firmachain from '../assets/firmachain.svg';
 import juno from '../assets/juno.svg';
-import ki from '../assets/ki.svg';
-import nois from '../assets/nois.svg';
-import omniflix from '../assets/omniflix.svg';
-import stargaze from '../assets/stargaze.svg';
+// import ki from '../assets/ki.svg';
+// import nois from '../assets/nois.svg';
+// import omniflix from '../assets/omniflix.svg';
+// import stargaze from '../assets/stargaze.svg';
 import passage from '../assets/passage_logo.svg';
 import { useRef, useEffect } from 'react';
 import {gsap, Power1} from 'gsap';
@@ -36,36 +36,36 @@ let cards = [
         image: juno,
         description: 'The first permissionless smart-contract platform in the Cosmos. Juno is community owned and governed through SubDAO`&apos`s on DAODAO.'
     },
-    {
-        name: 'Stargaze',
-        image: stargaze,
-        description: 'The go-to NFT platform in the Cosmos. Open, Permissionless and the home of Bad Kids the world over.'
-    },
-    {
-        name: 'Omniflixhub',
-        image: omniflix,
-        description: 'Mint, manage & distribute media assets, across multiple chains powered by NFTs, with extensible rights for fractionalization of ownership and increased distribution.'
-    },
-    {
-        name: 'Firmachain',
-        image: firmachain,
-        description: 'A multipurpose cosmos-sdk smart-contract enabled blockchain. Firmachain is targeted towards businesses wanting to build blockchain based products.'
-    },
-    {
-        name: 'Ki Chain',
-        image: ki,
-        description: 'Ki aims to bridge DeFi and CeFi with its Klub investor platform.'
-    },
-    {
-        name: 'Chihuahua',
-        image: chihuahua,
-        description: 'Chihuahua is the first interoperable layer-1 meme coin in the Cosmos, and supercharged with smart-contracts.'
-    },
-    {
-        name: 'Nois',
-        image: nois,
-        description: 'Nois protocol is a public good chain that provides reliable randomness to blockchain developers, derived from the drand beacon provided by the league of entropy.'
-    },
+    // {
+    //     name: 'Stargaze',
+    //     image: stargaze,
+    //     description: 'The go-to NFT platform in the Cosmos. Open, Permissionless and the home of Bad Kids the world over.'
+    // },
+    // {
+    //     name: 'Omniflixhub',
+    //     image: omniflix,
+    //     description: 'Mint, manage & distribute media assets, across multiple chains powered by NFTs, with extensible rights for fractionalization of ownership and increased distribution.'
+    // },
+    // {
+    //     name: 'Firmachain',
+    //     image: firmachain,
+    //     description: 'A multipurpose cosmos-sdk smart-contract enabled blockchain. Firmachain is targeted towards businesses wanting to build blockchain based products.'
+    // },
+    // {
+    //     name: 'Ki Chain',
+    //     image: ki,
+    //     description: 'Ki aims to bridge DeFi and CeFi with its Klub investor platform.'
+    // },
+    // {
+    //     name: 'Chihuahua',
+    //     image: chihuahua,
+    //     description: 'Chihuahua is the first interoperable layer-1 meme coin in the Cosmos, and supercharged with smart-contracts.'
+    // },
+    // {
+    //     name: 'Nois',
+    //     image: nois,
+    //     description: 'Nois protocol is a public good chain that provides reliable randomness to blockchain developers, derived from the drand beacon provided by the league of entropy.'
+    // },
 ]
 
 
@@ -93,7 +93,7 @@ const Networks = () => {
     
     return ( 
         <section id="networks" className="p-5 bg-transparent scroll-smooth">
-            <h2 className="font-bold text-3xl md:text-4xl lg:text-6xl text-[#3c2848] text-center tracking-wide uppercase">Our Networks</h2>
+            <h2 className="font-bold text-4xl md:text-4xl lg:text-6xl text-[#3c2848] text-center tracking-wide uppercase">Our Networks</h2>
             {/*network cards container*/}
             <div className="w-full py-10 px-5 flex flex-wrap items-start justify-evenly gap-5">
                 {/*----------network cards--------*/}

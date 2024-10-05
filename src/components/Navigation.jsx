@@ -60,10 +60,10 @@ const Navigation = () => {
     }
 
     let SmallNav =
-    <ul className='flex md:hidden flex-col items-center justify-around w-full min-h-[60vh] text-[#3c2848] uppercase absolute top-full left-0 z-20 bg-white p-5' ref={smallNav}>
+    <ul className='flex md:hidden flex-col items-center justify-around w-full min-h-[60vh] text-[#3c2848] uppercase absolute top-full left-0 z-20 bg-white p-5 scroll-smooth' ref={smallNav}>
                 {
                     Links.map(link => (
-                        <li key={link.id}><a href={link.value} onClick={toggleNav} className='font-semibold text-2xl'>{link.name}</a></li>
+                        <li key={link.id}><a href={link.value} onClick={toggleNav} className='font-semibold text-2xl scroll-smooth'>{link.name}</a></li>
                     ))
                 }
                 <div className='flex items-center justify-center mt-3'>
@@ -81,10 +81,10 @@ const Navigation = () => {
             <ul className='hidden md:flex items-center justify-around md:w-[70%] lg:w-[60%] text-[#3c2848] uppercase'>
                 {
                     Links.map(link => (
-                        <li key={link.id} ref={link.AniRef}><a href={link.value} className='font-semibold text-base hover:text-[#3c2848]/40 delay-75 ease-in-out'>{link.name}</a></li>
+                        <li key={link.id} ref={link.AniRef}><a href={link.value} className='font-semibold text-base hover:text-[#3c2848]/40 delay-75 ease-in-out scroll-smooth'>{link.name}</a></li>
                     ))
                 }
-                <div className='flex items-center justify-center px-2 py-3 rounded-3xl hover:text-white hover:bg-gradient-to-r hover:from-[#ff9e01] hover:via-[#6f1112] hover:to-[#fc210d] duration-75 ease-in-out delay-75' ref={btnAni}>
+                <div className='flex items-center justify-center px-2 py-3 rounded-3xl hover:text-white hover:bg-gradient-to-r hover:from-[#ff9e01] hover:via-[#6f1112] hover:to-[#fc210d] hover:shadow-lg duration-75 ease-in-out delay-75' ref={btnAni}>
                     <a href='#contact' className='font-extrabold text-lg mx-1'>Get in Touch</a>
                     <MdArrowOutward className='font-extrabold text-xl mx-1' />
                 </div>

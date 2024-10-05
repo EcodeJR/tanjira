@@ -27,6 +27,7 @@ function App() {
 
   return (
     <section className='w-full h-full relative scroll-smooth'>
+      <ScrollToTop />
       {
         loading && <PreLoader />
       }
@@ -38,7 +39,7 @@ function App() {
         <div className='w-60 h-60 md:w-80 md:h-80 absolute bottom-0 left-0 bg-gradient-to-r from-[#ff9e01] via-[#fc210d] to-[#6f1112] shadow-2xl shadow-[#fc210d] rounded-full'></div>
       </div>
       <section className='absolute top-0 left-0 z-10 w-full h-fit bg-white/20 backdrop-blur-md text-[#3c2848] scroll-smooth'>
-        <ScrollToTop />
+        
         <Navigation />
         <Home />
       </section>
