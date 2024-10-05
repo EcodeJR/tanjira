@@ -84,10 +84,10 @@ const Navigation = () => {
                         <li key={link.id} ref={link.AniRef}><a href={link.value} className='font-semibold text-base hover:text-[#3c2848]/40 delay-75 ease-in-out scroll-smooth'>{link.name}</a></li>
                     ))
                 }
-                <div className='flex items-center justify-center px-2 py-3 rounded-3xl hover:text-white hover:bg-gradient-to-r hover:from-[#ff9e01] hover:via-[#6f1112] hover:to-[#fc210d] hover:shadow-lg duration-75 ease-in-out delay-75' ref={btnAni}>
-                    <a href='#contact' className='font-extrabold text-lg mx-1'>Get in Touch</a>
-                    <MdArrowOutward className='font-extrabold text-xl mx-1' />
-                </div>
+                <a href='#contact' className='flex items-center justify-center px-2 py-3 rounded-3xl hover:text-white hover:bg-gradient-to-r hover:from-[#ff9e01] hover:via-[#6f1112] hover:to-[#fc210d] hover:shadow-lg duration-75 ease-in-out delay-75' ref={btnAni}>
+                    <span className='font-extrabold text-lg mx-1 h-full w-full'>Get in Touch</span>
+                    <MdArrowOutward className='font-extrabold text-2xl mx-1' />
+                </a>
             </ul>
             {
                 smallscreen ? SmallNav : null
