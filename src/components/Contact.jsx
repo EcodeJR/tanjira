@@ -125,7 +125,7 @@ const Contact = () => {
                 <div className="gap-2 flex flex-wrap">
                     {
                         socials.map((social, index) => (
-                            <a className="mx-2 cursor-pointer font-bold" href={social.link} key={index} ref={el => socialsCont.current[index] = el}>{social.icon}</a>
+                            <a className="mx-2 cursor-pointer font-bold" href={social.link} key={index} ref={el => socialsCont.current[index] = el} target="_blank">{social.icon}</a>
                         ))
                     }
                 </div>
