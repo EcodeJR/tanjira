@@ -1,4 +1,4 @@
-import injective from '../assets/injective.svg';
+import jackal from '../assets/jackal.svg';
 // import chihuahua from '../assets/chihuahua.svg';
 import evmos from '../assets/evmos.svg';
 // import firmachain from '../assets/firmachain.svg';
@@ -22,9 +22,9 @@ let cards = [
         description: 'Making virtual more human. World-class virtual experiences on any device—No downloads, no apps, no compromises.'
     },
     {
-        name: 'Injective',
-        image: injective,
-        description: 'Injective is an open and interoperable blockchain built to for DeFi applications with time to finality nearing 1 second.'
+        name: 'Jackal',
+        image: jackal,
+        description: 'Jackal is a blockchain that delivers decentralized data storage to individuals, businesses, and other blockchains.'
     },
     {
         name: 'Evmos',
@@ -99,10 +99,10 @@ const Networks = () => {
                 {/*----------network cards--------*/}
                 {
                     cards.map((card, index) => (
-                        <div className={`bg-[#3c2848] rounded-md text-white flex flex-col items-start justify-around p-3 w-[80%] md:max-w-[30vw] lg:max-w-[20vw] relative ${index != 0 ? "before:absolute before:top-0 before:left-0 before:z-20 before:h-full before:w-full before:bg-black/70 before:rounded-md" : "blur-0"}`} key={index} ref={el => netCard.current[index] = el}>
-                            <h2 className={`${index != 0 ? "text-xl text-center text-white opacity-100 z-20 font-bold mx-auto absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] animate-pulse" : "opacity-0"}`}>COMING SOON</h2>
-                            <img src={card.image} alt={`${card.name} logo`} className={`w-[10vw] ${index != 0 ? "blur-lg" : "blur-0"}`} />
-                            <div className={`p-2 ${index != 0 ? "blur-lg" : "blur-0"}`}>
+                        <div className={`bg-[#3c2848] rounded-md text-white flex flex-col items-start justify-around p-3 w-[80%] md:max-w-[30vw] lg:max-w-[20vw] relative ${index != 0 && index != 1 ? "before:absolute before:top-0 before:left-0 before:z-20 before:h-full before:w-full before:bg-black/70 before:rounded-md" : "blur-0"}`} key={index} ref={el => netCard.current[index] = el}>
+                            <h2 className={`${index != 0 && index != 1 ? "text-xl text-center text-white opacity-100 z-20 font-bold mx-auto absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] animate-pulse" : "opacity-0"}`}>COMING SOON</h2>
+                            <img src={card.image} alt={`${card.name} logo`} className={`w-[10vw] ${index != 0 && index != 1 ? "blur-lg" : "blur-0"}`} />
+                            <div className={`p-2 ${index != 0 && index != 1 ? "blur-lg" : "blur-0"}`}>
                                 <h5 className="text-2xl font-extrabold py-2">{card.name}</h5>
                                 <p className="text-base">{card.description}</p>
                             </div>

@@ -131,19 +131,19 @@ const Services = () => {
                         <p className='pr-3 text-center md:text-left w-[100%] md:w-[80%] text-base text-gray-600 py-2'>Blockchain validation ensures the integrity and security of a blockchain network. As validators, our role is essential in keeping the network stable and trustworthy. Our dedication helps maintain the system's reliability for everyone involved.</p>
                         <details className='w-[90vw] md:w-[40vw] h-fit bg-black/10 p-3 my-2'>
                             <summary className='text-xl font-bold'>Security</summary>
-                            <p className='pl-5 text-base text-gray-600'>Emphasize how your validation process enhances the network's security by verifying transactions and preventing malicious activity.</p>
+                            <p className='pl-5 text-base text-gray-600'>Our validation process enhances the network's security by verifying transactions and preventing malicious activity.</p>
                         </details>
                         <details className='w-[90vw] md:w-[40vw] h-fit bg-black/10 p-3 my-2'>
                             <summary className='text-xl font-bold'>Consensus Mechanism</summary>
-                            <p className='pl-5 text-base text-gray-600'>Explain the consensus mechanism you use (e.g., proof of stake, proof of work) and how it contributes to network trust.</p>
+                            <p className='pl-5 text-base text-gray-600'>We utilize Proof of stake(PoS) consensus mechanism, where validators stake their own cryptocurrency to secure the network, validate transactions, and create new blocks, thereby contributing to network trust through economic incentives, decentralization, and reduced 51% attack vulnerability.</p>
                         </details>
                         <details className='w-[90vw] md:w-[40vw] h-fit bg-black/10 p-3 my-2'>
                             <summary className='text-xl font-bold'>Infrastructure</summary>
-                            <p className='pl-5 text-base text-gray-600'>Highlight your robust infrastructure, including server locations, redundancy, and failover mechanisms.</p>
+                            <p className='pl-5 text-base text-gray-600'>We have a robust infrastructure, including server locations, redundancy, and failover mechanisms.</p>
                         </details>
                         <details className='w-[90vw] md:w-[40vw] h-fit bg-black/10 p-3 my-2'>
                             <summary className='text-xl font-bold'>Staking Rewards</summary>
-                            <p className='pl-5 text-base text-gray-600'>Mention the rewards users can earn by staking their tokens with your validator.</p>
+                            <p className='pl-5 text-base text-gray-600'>There are rewards users can earn by staking their tokens with your validator.</p>
                         </details>
                     </div>
                 </div>
@@ -156,15 +156,15 @@ const Services = () => {
                         <p className='pr-3 text-center md:text-left w-[100%] md:w-[80%] text-base text-gray-600 py-2'>Educating users and providing onboarding resources are essential for a thriving community.</p>
                         <details className='w-[90vw] md:w-[40vw] h-fit bg-black/10 p-3 my-2'>
                             <summary className='text-xl font-bold'>Tutorials</summary>
-                            <p className='pl-5 text-base text-gray-600'>Create step-by-step guides on setting up wallets, staking, and participating in governance.</p>
+                            <p className='pl-5 text-base text-gray-600'>We Create step-by-step guides on setting up wallets, staking, and participating in governance.</p>
                         </details>
                         <details className='w-[90vw] md:w-[40vw] h-fit bg-black/10 p-3 my-2'>
                             <summary className='text-xl font-bold'>Bootcamps</summary>
-                            <p className='pl-5 text-base text-gray-600'>Host virtual bootcamps or workshops where users can learn about blockchain technology, consensus algorithms, and best practices.</p>
+                            <p className='pl-5 text-base text-gray-600'>We Host virtual bootcamps or workshops where users can learn about blockchain technology, consensus algorithms, and best practices.</p>
                         </details>
                         <details className='w-[90vw] md:w-[40vw] h-fit bg-black/10 p-3 my-2'>
                             <summary className='text-xl font-bold'>Expert Guidance</summary>
-                            <p className='pl-5 text-base text-gray-600'>Offer personalized assistance to new users, helping them navigate the complexities of blockchain networks.</p>
+                            <p className='pl-5 text-base text-gray-600'>We offer personalized assistance to new users, helping them navigate the complexities of blockchain networks.</p>
                         </details>
                     </div>
 
@@ -174,11 +174,11 @@ const Services = () => {
                         <p className='pr-3 text-base text-center md:text-left w-[100%] text-gray-600 py-2'>Community Engagement.</p>
                         <details className='w-[90vw] md:w-[40vw] h-fit bg-black/10 p-3 my-2'>
                             <summary className='text-xl font-bold'>Forums and Chats</summary>
-                            <p className='pl-5 text-base text-gray-600'>Set up community forums or chat channels where users can discuss blockchain-related topics, share insights, and ask questions.</p>
+                            <p className='pl-5 text-base text-gray-600'>We set up community forums or chat channels where users can discuss blockchain-related topics, share insights, and ask questions.</p>
                         </details>
                         <details className='w-[90vw] md:w-[40vw] h-fit bg-black/10 p-3 my-2'>
                             <summary className='text-xl font-bold'>Governance Participation</summary>
-                            <p className='pl-5 text-base text-gray-600'>Encourage users to participate in network governance decisions, reinforcing a sense of ownership.</p>
+                            <p className='pl-5 text-base text-gray-600'>We encourage users to participate in network governance decisions, reinforcing a sense of ownership.</p>
                         </details>
                     </div>
                 </div>

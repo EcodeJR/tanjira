@@ -5,7 +5,7 @@ import Services from '../components/Services';
 import Benefits from '../components/Benefits';
 import Networks from '../components/Networks';
 import Contact from '../components/Contact';
-import { useState, useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import {gsap, Power1} from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -28,49 +28,49 @@ const Home = () => {
     scrollToTop();
   })
 
-    const [counters, setCounters] = useState([0, 0]);
+    // const [counters, setCounters] = useState([0, 0]);
     const countersRefs = [useRef(null), useRef(null)];
   
-    const finalValues = [1, 99]; // Final values for each counter
+    // const finalValues = [1, 99]; // Final values for each counter
   
-    useEffect(() => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry, index) => {
-            if (entry.isIntersecting) {
-              let currentCount = 0;
-              const countInterval = setInterval(() => {
-                if (currentCount === finalValues[index]) {
-                  clearInterval(countInterval);
-                } else {
-                  currentCount += 1;
-                  setCounters((prevCounters) => {
-                    const updatedCounters = [...prevCounters];
-                    updatedCounters[index] = currentCount;
-                    return updatedCounters;
-                  });
-                }
-              }, 10);
-            }
-          });
-        },
-        { threshold: 1 } // Adjust threshold as needed
-      );
+    // useEffect(() => {
+    //   const observer = new IntersectionObserver(
+    //     (entries) => {
+    //       entries.forEach((entry, index) => {
+    //         if (entry.isIntersecting) {
+    //           let currentCount = 0;
+    //           const countInterval = setInterval(() => {
+    //             if (currentCount === finalValues[index]) {
+    //               clearInterval(countInterval);
+    //             } else {
+    //               currentCount += 1;
+    //               setCounters((prevCounters) => {
+    //                 const updatedCounters = [...prevCounters];
+    //                 updatedCounters[index] = currentCount;
+    //                 return updatedCounters;
+    //               });
+    //             }
+    //           }, 10);
+    //         }
+    //       });
+    //     },
+    //     { threshold: 1 } // Adjust threshold as needed
+    //   );
   
-      countersRefs.forEach((ref) => {
-        if (ref.current) {
-          observer.observe(ref.current);
-        }
-      });
+    //   countersRefs.forEach((ref) => {
+    //     if (ref.current) {
+    //       observer.observe(ref.current);
+    //     }
+    //   });
   
-      return () => {
-        countersRefs.forEach((ref) => {
-          if (ref.current) {
-            observer.unobserve(ref.current);
-          }
-        });
-      };
-    }, []);
+    //   return () => {
+    //     countersRefs.forEach((ref) => {
+    //       if (ref.current) {
+    //         observer.unobserve(ref.current);
+    //       }
+    //     });
+    //   };
+    // }, []);
 
     const mainText1 = useRef(null);
     const counterAni = useRef(null);
@@ -126,11 +126,11 @@ const Home = () => {
             <div className="w-full h-fit flex flex-col-reverse md:flex-wrap md:flex-row items-center justify-around p-3">
                 <div className="flex flex-col items-center justify-center" ref={counterAni}>
                     <div className="p-10 rounded-lg flex flex-col items-center justify-center border-[1px] border-black/5 bg-gray-500/10 my-3">
-                        <h1 className='text-[#3c2848] text-4xl md:text-5xl lg:text-5xl' ref={countersRefs[0]}>{counters[0]}+</h1>
+                        <h1 className='text-[#3c2848] text-4xl md:text-5xl lg:text-5xl' ref={countersRefs[0]}>2+</h1>
                         <p className='text-gray-500 text-base'>NETWORKS</p>
                     </div>
                     <div className="p-10 rounded-lg flex flex-col items-center justify-center border-[1px] border-black/5 bg-gray-500/10">
-                      <h1 className='text-[#3c2848] text-4xl md:text-5xl lg:text-5xl' ref={countersRefs[1]}>{counters[1]}%</h1>
+                      <h1 className='text-[#3c2848] text-4xl md:text-5xl lg:text-5xl' ref={countersRefs[1]}>99%</h1>
                       <p className='text-gray-500 text-base'>UP TIME</p>
                     </div>
                 </div>
