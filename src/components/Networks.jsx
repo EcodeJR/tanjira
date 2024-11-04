@@ -17,7 +17,7 @@ gsap.registerPlugin(Power1);
 
 let cards = [
     {
-        name: 'Passgae',
+        name: 'Passage',
         image: passage,
         description: 'Making virtual more human. World-class virtual experiences on any device—No downloads, no apps, no compromises.'
     },
