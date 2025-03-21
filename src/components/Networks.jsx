@@ -3,6 +3,7 @@ import jackal from '../assets/jackal.svg';
 import evmos from '../assets/evmos.svg';
 // import firmachain from '../assets/firmachain.svg';
 import juno from '../assets/juno.svg';
+import atomone from '../assets/atomone_.png';
 // import ki from '../assets/ki.svg';
 // import nois from '../assets/nois.svg';
 // import omniflix from '../assets/omniflix.svg';
@@ -28,7 +29,7 @@ let cards = [
     },
     {
         name: 'AtomOne',
-        image: atomone_,
+        image: atomone,
         description: 'AtomOne is a community-driven, constitutionally governed blockchain designed to prioritize security, decentralization, and innovation.'
     },
     {
