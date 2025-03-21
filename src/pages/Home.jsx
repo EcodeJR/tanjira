@@ -126,7 +126,7 @@ const Home = () => {
             <div className="w-full h-fit flex flex-col-reverse md:flex-wrap md:flex-row items-center justify-around p-3">
                 <div className="flex flex-col items-center justify-center" ref={counterAni}>
                     <div className="p-10 rounded-lg flex flex-col items-center justify-center border-[1px] border-black/5 bg-gray-500/10 my-3">
-                        <h1 className='text-[#3c2848] text-4xl md:text-5xl lg:text-5xl' ref={countersRefs[0]}>2+</h1>
+                        <h1 className='text-[#3c2848] text-4xl md:text-5xl lg:text-5xl' ref={countersRefs[0]}>3+</h1>
                         <p className='text-gray-500 text-base'>NETWORKS</p>
                     </div>
                     <div className="p-10 rounded-lg flex flex-col items-center justify-center border-[1px] border-black/5 bg-gray-500/10">

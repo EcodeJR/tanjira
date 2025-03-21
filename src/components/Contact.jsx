@@ -20,7 +20,7 @@ const socials = [
     // },
     {
         icon: <FaXTwitter className="text-3xl" />,
-        link: 'https://twitter.com'
+        link: 'https://twitter.com/Tanjirapr'
     },
     // {
     //     icon: <FaSquareWhatsapp className="text-3xl" />,
