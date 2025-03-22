@@ -18,14 +18,14 @@ gsap.registerPlugin(Power1);
 
 let cards = [
     {
-        name: 'Passage',
-        image: passage,
-        description: 'Making virtual more human. World-class virtual experiences on any device—No downloads, no apps, no compromises.'
-    },
-    {
         name: 'Jackal',
         image: jackal,
         description: 'Jackal is a blockchain that delivers decentralized data storage to individuals, businesses, and other blockchains.'
+    },
+    {
+        name: 'Passage',
+        image: passage,
+        description: 'Making virtual more human. World-class virtual experiences on any device—No downloads, no apps, no compromises.'
     },
     {
         name: 'AtomOne',
@@ -37,11 +37,11 @@ let cards = [
         image: evmos,
         description: 'Evmos is bringing the world of Ethereum-based applications and assets to the interoperable networks of the Cosmos ecosystem.'
     },
-    {
-        name: 'Juno',
-        image: juno,
-        description: 'The first permissionless smart-contract platform in the Cosmos. Juno is community owned and governed through SubDAO`&apos`s on DAODAO.'
-    },
+    // {
+    //     name: 'Juno',
+    //     image: juno,
+    //     description: 'The first permissionless smart-contract platform in the Cosmos. Juno is community owned and governed through SubDAO`&apos`s on DAODAO.'
+    // },
     // {
     //     name: 'Stargaze',
     //     image: stargaze,
@@ -105,7 +105,7 @@ const Networks = () => {
                 {/*----------network cards--------*/}
                 {
                     cards.map((card, index) => (
-                        <div className={`bg-[#3c2848] rounded-md text-white flex flex-col items-start justify-around p-3 w-[80%] md:max-w-[30vw] lg:max-w-[20vw] relative ${index !== 0 && index !== 1 && index !== 2 ? "before:absolute before:top-0 before:left-0 before:z-20 before:h-full before:w-full before:bg-black/70 before:rounded-md" : "blur-0"}`} key={index} ref={el => netCard.current[index] = el}>
+                        <div className={`bg-[#3c2848] rounded-md text-white flex flex-col items-start justify-around p-3 h-fit md:max-h-[25vh] lg:max-h-[30vh] w-[80%] md:max-w-[30vw] lg:max-w-[20vw] relative ${index !== 0 && index !== 1 && index !== 2 ? "before:absolute before:top-0 before:left-0 before:z-20 before:h-full before:w-full before:bg-black/70 before:rounded-md" : "blur-0"}`} key={index} ref={el => netCard.current[index] = el}>
                             <h2 className={`${index !== 0 && index !== 1 && index !== 2 ? "text-xl text-center text-white opacity-100 z-20 font-bold mx-auto absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] animate-pulse" : "opacity-0"}`}>COMING SOON</h2>
                             <img 
                                 src={card.image} 
