@@ -65,7 +65,7 @@ const Benefits = () => {
                     </div>
                     <div className="flex items-center justify-between flex-col px-2 py-4 bg-[#3c2848] rounded-tr-2xl rounded-bl-2xl text-white">
                         <h3 className="text-2xl md:text-4xl font-extrabold mb-4 uppercase text-center">Security</h3>
-                        <p className="text-center">We provide high quality, secure, and professionally managed infrastructure so that you can be conﬁdent in your staking rewards, day after day.</p>
+                        <p className="text-center text-gray-300">We provide high quality, secure, and professionally managed infrastructure so that you can be conﬁdent in your staking rewards, day after day.</p>
                         
                         {/* <ul className="text-justify text-sm list-decimal">
                             <li><p> Our robust validation process ensures the integrity and security of blockchain networks.</p></li>
@@ -82,7 +82,7 @@ const Benefits = () => {
                     </div>
                     <div className="flex items-center justify-between flex-col px-2 py-4 bg-[#3c2848] rounded-tr-2xl rounded-bl-2xl text-white">
                         <h3 className="text-2xl md:text-4xl font-extrabold mb-4 uppercase text-center">Only the best networks.</h3>
-                        <p className="text-center">We only run validator nodes on networks that we believe to be the best candidates for successful blockchains and products. We stake our own assets as proof.</p>
+                        <p className="text-center text-gray-300">We only run validator nodes on networks that we believe to be the best candidates for successful blockchains and products. We stake our own assets as proof.</p>
                         {/* <ul className="text-justify text-sm list-decimal">
                             <li><p> We provide comprehensive tutorials, bootcamps, and expert guidance for users new to blockchain technology.</p></li>
                             <li><p> Whether setting up wallets or understanding consensus mechanisms, our educational content empowers users.</p></li>
@@ -98,7 +98,7 @@ const Benefits = () => {
                     </div>
                     <div className="flex items-center justify-between flex-col px-2 py-4 bg-[#3c2848] rounded-tr-2xl rounded-bl-2xl text-white">
                         <h3 className="text-2xl md:text-4xl font-extrabold mb-4 uppercase text-center">Slash protected.</h3>
-                        <p className="text-center">You can be conﬁdent in your investment with our 100% soft-slash protection. We will refund any funds lost to a downtime slash.</p>
+                        <p className="text-center text-gray-300">You can be conﬁdent in your investment with our 100% soft-slash protection. We will refund any funds lost to a downtime slash.</p>
                         {/* <ul className="text-justify list-decimal text-sm">
                             <li><p> Join our active community forums and chats to discuss blockchain topics, share insights, and participate in governance decisions.</p></li>
                             <li><p> As part of our commitment to giving back, a portion of our validator rewards goes to charitable causes.</p></li>
