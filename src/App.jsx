@@ -1,11 +1,21 @@
 import Navigation from './components/Navigation';
 import Home from './pages/Home';
 import ScrollToTop from './components/ScrollToTop';
+import PreLoader from './components/PreLoader';
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 2200);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <section className='relative min-h-screen overflow-x-hidden bg-[#0d0d18] text-[#e9e6f7]'>
       <ScrollToTop />
+      {loading && <PreLoader />}
 
       <div className='pointer-events-none fixed inset-0 z-0'>
         <div className='absolute -top-40 -right-20 h-80 w-80 rounded-full bg-[#ff9157]/20 blur-[90px]' />

@@ -1,9 +1,10 @@
-import homesvg from '../assets/head1_svg.svg';
 import logo from '../assets/tanjira_logo.svg';
 import Services from '../components/Services';
 import Benefits from '../components/Benefits';
 import Networks from '../components/Networks';
 import Contact from '../components/Contact';
+
+const templateHeroImage = 'https://lh3.googleusercontent.com/aida-public/AB6AXuC3q2rCe-Mm9tvs4-ulirGi3QoYkVY5fZJUkRPcbjWb4pRvpeH9xhHxpjlP7fMm8xmiP82h43r84XdcR5syvi1GtkMo_-HoA7Lp2MZhSbTLq1Um_QYTzCgevQPOzOVxDvgFOX8Z5NzE8v0c0wcV8ceYGJTCT1J-o4_Gx1a5M1fr-3eQDif83blysOFrVg4GVeY3ki2R5c7dAGJOt3w-ayp1dMdQfWoPnZQ3ZT-AJl-4qHvP99MIXy8MyZQlUL5d33jMfEUFOm5mMQ';
 
 const Home = () => {
   return (
@@ -43,16 +44,17 @@ const Home = () => {
 
           <div className='relative mx-auto flex h-[340px] w-[320px] items-center justify-center md:h-[520px] md:w-[520px]'>
             <div className='absolute inset-12 rounded-[2rem] bg-[#81ecff]/10 blur-[70px]' />
-            <div className='absolute inset-6 rotate-12 rounded-[2rem] border border-white/10 bg-[#1e1e2d]/40 backdrop-blur-2xl' />
+            <div className='absolute inset-6 rotate-12 overflow-hidden rounded-[2rem] border border-white/10 bg-[#1e1e2d]/40 backdrop-blur-2xl'>
+              <img
+                src={templateHeroImage}
+                alt='Template hero architecture'
+                className='h-full w-full object-cover opacity-60 mix-blend-screen'
+              />
+            </div>
             <div className='absolute inset-6 -rotate-6 rounded-[2rem] border border-white/5 bg-[#12121e]/70' />
             <div className='relative z-10 flex h-36 w-36 items-center justify-center rounded-3xl bg-[#0d0d18]/70 backdrop-blur-md md:h-48 md:w-48'>
               <img src={logo} alt='Tanjira emblem' className='h-20 w-20 md:h-28 md:w-28' />
             </div>
-            <img
-              src={homesvg}
-              alt='Abstract architectural visual'
-              className='absolute bottom-0 right-0 h-40 w-40 opacity-40 md:h-56 md:w-56'
-            />
           </div>
         </div>
 
