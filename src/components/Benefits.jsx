@@ -1,114 +1,65 @@
-import security from '../assets/sec2.png';
-import education from '../assets/learn1.png';
-import charity from '../assets/comm2.png';
-import { useRef, useEffect } from 'react';
-import {gsap, Power1} from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+const benefits = [
+    {
+        id: '01',
+        title: 'Institutional Security',
+        body: 'Hardware security modules and multi-sig authorization layers protecting every byte.',
+        icon: '●',
+        tone: 'text-[#ff9157]',
+    },
+    {
+        id: '02',
+        title: 'Only the Best Networks',
+        body: 'Rigorous due diligence on every protocol we support. Quality over quantity, always.',
+        icon: '◼',
+        tone: 'text-[#81ecff]',
+    },
+    {
+        id: '03',
+        title: 'Slash Protected',
+        body: 'Zero-slashing history across all supported networks since inception.',
+        icon: '◆',
+        tone: 'text-[#aa8aff]',
+    },
+];
 
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(Power1);
 const Benefits = () => {
-
-    const card1 = useRef(null);
-    const card2 = useRef(null);
-    const card3 = useRef(null);
-
-    useEffect(() => {
-        gsap.fromTo(card1.current, 
-            { y: 100, opacity: 0 }, // from values
-            { y: 0, opacity: 1, duration: 0.5, ease: "power1.inOut",
-              scrollTrigger: {
-                trigger: card1.current, // element to trigger animation
-                start: "top 80%",
-                end: "bottom top",
-                toggleActions: "play pause resume none",
-              }
-             } // to values
-          );
-
-          gsap.fromTo(card2.current, 
-            { y: 100, opacity: 0 }, // from values
-            { y: 0, opacity: 1, duration: 1, ease: "power1.inOut",
-              scrollTrigger: {
-                trigger: card2.current, // element to trigger animation
-                start: "top 80%",
-                end: "bottom top",
-                toggleActions: "play pause resume none",
-              }
-             } // to values
-          );
-
-          gsap.fromTo(card3.current, 
-            { y: 100, opacity: 0 }, // from values
-            { y: 0, opacity: 1, duration: 2, ease: "power1.inOut",
-              scrollTrigger: {
-                trigger: card3.current, // element to trigger animation
-                start: "top 80%",
-                end: "bottom top",
-                toggleActions: "play pause resume none",
-              }
-             } // to values
-          );
-    
-    }, [])
-    
-
-    return ( 
-        <section id="benefits" className="p-5 bg-transparent scroll-smooth">
-            <h2 className="font-bold text-4xl md:text-4xl lg:text-6xl text-[#3c2848] text-center tracking-wide uppercase">Our Benefits</h2>
-            {/*cards container*/}
-            <div className="w-full h-fit gap-10 flex flex-wrap items-center justify-evenly py-10 px-1 text-[#3c2848]">
-                {/*card 1*/}
-                <div className="w-[90%] md:max-w-[40vw] lg:w-[25vw] h-fit flex flex-col items-center justify-center px-4 py-1 overflow-hidden" ref={card1}>
-                    <div className="flex items-center justify-center">
-                        <img src={security} alt="A security shield" className='w-[40vw] lg:w-[15vw]' />
+    return (
+        <section id='benefits' className='bg-[#0d0d18] px-4 py-24 md:px-8'>
+            <div className='mx-auto w-full max-w-7xl'>
+                <div className='mb-14 flex flex-col justify-between gap-5 md:flex-row md:items-end'>
+                    <div className='space-y-3'>
+                        <h2 className='font-label text-xs uppercase tracking-[0.22em] text-[#ff9157]'>Why Tanjira</h2>
+                        <h3 className='font-headline text-4xl font-bold tracking-tight text-[#e9e6f7] md:text-5xl'>Architected for Resiliency</h3>
                     </div>
-                    <div className="flex items-center justify-between flex-col px-2 py-4 bg-[#3c2848] rounded-tr-2xl rounded-bl-2xl text-white">
-                        <h3 className="text-2xl md:text-4xl font-extrabold mb-4 uppercase text-center">Security</h3>
-                        <p className="text-center text-gray-300">We provide high quality, secure, and professionally managed infrastructure so that you can be conﬁdent in your staking rewards, day after day.</p>
-                        
-                        {/* <ul className="text-justify text-sm list-decimal">
-                            <li><p> Our robust validation process ensures the integrity and security of blockchain networks.</p></li>
-                            <li><p> By validating transactions and preventing malicious activity, we contribute to a stable and trustworthy ecosystem.</p></li>
-                            <li><p> Users can confidently participate, knowing their assets are safeguarded by our commitment to security.</p></li>
-                        </ul> */}
-                    </div>
+                    <p className='max-w-md text-[#aba9b9]'>
+                        We do not just run nodes. We build foundational infrastructure that powers next-generation decentralized systems.
+                    </p>
                 </div>
 
-                {/*card 2*/}
-                <div className="w-[90%] md:max-w-[40vw] lg:w-[25vw] h-fit flex flex-col items-center justify-center px-4 py-1 overflow-hidden" ref={card2}>
-                    <div className="flex items-center justify-center">
-                    <img src={education} alt="A book" className='w-[40vw] lg:w-[15vw]' />
-                    </div>
-                    <div className="flex items-center justify-between flex-col px-2 py-4 bg-[#3c2848] rounded-tr-2xl rounded-bl-2xl text-white">
-                        <h3 className="text-2xl md:text-4xl font-extrabold mb-4 uppercase text-center">Only the best networks.</h3>
-                        <p className="text-center text-gray-300">We only run validator nodes on networks that we believe to be the best candidates for successful blockchains and products. We stake our own assets as proof.</p>
-                        {/* <ul className="text-justify text-sm list-decimal">
-                            <li><p> We provide comprehensive tutorials, bootcamps, and expert guidance for users new to blockchain technology.</p></li>
-                            <li><p> Whether setting up wallets or understanding consensus mechanisms, our educational content empowers users.</p></li>
-                            <li><p> Smooth onboarding ensures a seamless experience for all participants.</p></li>
-                        </ul> */}
-                    </div>
-                </div>
+                <div className='space-y-4'>
+                    {benefits.map((benefit) => (
+                        <article
+                            key={benefit.id}
+                            className='group flex flex-col items-start gap-6 rounded-2xl bg-[#1e1e2d] p-6 transition-all hover:bg-[#242434] md:flex-row md:items-center'
+                        >
+                            <div className='flex h-12 w-12 items-center justify-center rounded-full bg-[#0d0d18] text-lg'>
+                                <span className={benefit.tone}>{benefit.icon}</span>
+                            </div>
 
-                {/*card 3*/}
-                <div className="w-[90%] md:max-w-[40vw] lg:w-[25vw] h-fit flex flex-col items-center justify-around px-4 py-1 overflow-hidden" ref={card3}>
-                    <div className="flex items-center justify-center">
-                        <img src={charity} alt="A charity" className='w-[40vw] lg:w-[15vw]' />
-                    </div>
-                    <div className="flex items-center justify-between flex-col px-2 py-4 bg-[#3c2848] rounded-tr-2xl rounded-bl-2xl text-white">
-                        <h3 className="text-2xl md:text-4xl font-extrabold mb-4 uppercase text-center">Slash protected.</h3>
-                        <p className="text-center text-gray-300">You can be conﬁdent in your investment with our 100% soft-slash protection. We will refund any funds lost to a downtime slash.</p>
-                        {/* <ul className="text-justify list-decimal text-sm">
-                            <li><p> Join our active community forums and chats to discuss blockchain topics, share insights, and participate in governance decisions.</p></li>
-                            <li><p> As part of our commitment to giving back, a portion of our validator rewards goes to charitable causes.</p></li>
-                            <li><p> Transparency in our charitable initiatives reinforces trust and community involvement.</p></li>
-                        </ul> */}
-                    </div>
+                            <div className='flex-1'>
+                                <h4 className='font-headline text-xl font-bold text-[#e9e6f7]'>{benefit.title}</h4>
+                                <p className='mt-1 text-sm text-[#aba9b9]'>{benefit.body}</p>
+                            </div>
+
+                            <span className='font-headline text-4xl font-bold text-[#2f2f3e] transition-colors group-hover:text-[#3a3a4f]'>
+                                {benefit.id}
+                            </span>
+                        </article>
+                    ))}
                 </div>
             </div>
         </section>
-     );
-}
- 
+    );
+};
+
 export default Benefits;

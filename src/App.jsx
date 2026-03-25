@@ -1,50 +1,24 @@
 import Navigation from './components/Navigation';
 import Home from './pages/Home';
-// import bgVideo from './assets/video_bg.mp4';
-import PreLoader from './components/PreLoader';
-import { useEffect, useState } from 'react';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const removeLoader = () => setLoading(false);
-  
-    // Add event listener right away to catch the load event
-    window.addEventListener('load', removeLoader);
-  
-    // Fallback in case load event takes too long
-    const timer = setTimeout(removeLoader, 9000);
-  
-    return () => {
-      window.removeEventListener('load', removeLoader);
-      clearTimeout(timer); // Cleanup timeout
-    };
-  }, []);
-  
-  
-
   return (
-    <section className='w-full h-full relative scroll-smooth'>
+    <section className='relative min-h-screen overflow-x-hidden bg-[#0d0d18] text-[#e9e6f7]'>
       <ScrollToTop />
-      {
-        loading && <PreLoader />
-      }
-       
-      
-      {/* <video src={bgVideo} autoPlay loop muted className='w-[100vw] h-screen fixed top-0 left-0 object-cover z-0' /> */}
-      <div className='w-screen h-screen fixed top-0 left-0 right-0 bg-white/60 z-0'>
-        <div className='w-60 h-60 md:w-80 md:h-80 absolute top-0 right-0 bg-gradient-to-r from-[#ff9e01] via-[#fc210d] to-[#6f1112] shadow-2xl shadow-[#fc210d] rounded-full'></div>
-        <div className='w-60 h-60 md:w-80 md:h-80 absolute bottom-0 left-0 bg-gradient-to-r from-[#ff9e01] via-[#fc210d] to-[#6f1112] shadow-2xl shadow-[#fc210d] rounded-full'></div>
+
+      <div className='pointer-events-none fixed inset-0 z-0'>
+        <div className='absolute -top-40 -right-20 h-80 w-80 rounded-full bg-[#ff9157]/20 blur-[90px]' />
+        <div className='absolute bottom-10 -left-20 h-96 w-96 rounded-full bg-[#81ecff]/10 blur-[120px]' />
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(129,236,255,0.06)_1px,transparent_1px)] bg-[length:40px_40px] opacity-60' />
       </div>
-      <section className='absolute top-0 left-0 z-10 w-full h-fit bg-white/20 backdrop-blur-md text-[#3c2848] scroll-smooth'>
-        
+
+      <div className='relative z-10'>
         <Navigation />
         <Home />
-      </section>
+      </div>
     </section>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,138 +1,62 @@
-import { MdMarkEmailRead } from "react-icons/md";
-// import { FaPhoneSquareAlt } from "react-icons/fa";
-// import { FaFacebook } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
-// import { FaSquareWhatsapp } from "react-icons/fa6";
-// import { FaDiscord } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa6";
-import { useRef, useEffect } from 'react';
-import {gsap, Power1} from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(Power1);
-
-
 const socials = [
-    // {
-    //     icon: < FaFacebook className="text-3xl" />,
-    //     link: 'https//:link.com'
-    // },
     {
-        icon: <FaXTwitter className="text-3xl" />,
+    icon: <FaXTwitter className="text-xl" />,
         link: 'https://twitter.com/Tanjirapr'
     },
-    // {
-    //     icon: <FaSquareWhatsapp className="text-3xl" />,
-    //     link: 'https//:link.com'
-    // },
-    // {
-    //     icon: <FaDiscord className="text-3xl" />,
-    //     link: 'https//:link.com'
-    // },
     {
-        icon: <FaTelegram className="text-3xl" />,
+    icon: <FaTelegram className="text-xl" />,
         link: 'https://t.me/tanjira_validator'
     },
 ]
 
 
 const Contact = () => {
+  return (
+    <section id="contact" className="relative overflow-hidden bg-[#0d0d18] px-4 py-24 md:px-8">
+      <div className="mx-auto w-full max-w-5xl">
+        <div className="relative overflow-hidden rounded-[2rem] border border-white/5 bg-[#1e1e2d]/70 p-8 text-center backdrop-blur-2xl md:p-14">
+          <div className="absolute -left-12 -top-14 h-44 w-44 rounded-full bg-[#ff9157]/15 blur-[70px]" />
+          <div className="absolute -bottom-16 -right-16 h-56 w-56 rounded-full bg-[#81ecff]/10 blur-[90px]" />
 
-    const mainTextcont = useRef(null);
-    const smallTextcont = useRef(null);
-    const emailcont = useRef(null);
-    const phonecont = useRef(null);
-    const socialsCont = useRef([]);
+          <h3 className="relative font-headline text-4xl font-bold tracking-tight text-[#e9e6f7] md:text-5xl">Ready to secure the future?</h3>
+          <p className="relative mx-auto mt-5 max-w-2xl text-[#aba9b9]">
+            Partner with us for institutional validation services or custom network infrastructure.
+          </p>
 
-    useEffect(() => {
-        gsap.fromTo(mainTextcont.current, 
-            { y: 100, opacity: 0 }, // from values
-            { y: 0, opacity: 1, duration: 1, ease: "power1.inOut",
-              scrollTrigger: {
-                trigger: mainTextcont.current, // element to trigger animation
-                start: "top 80%",
-                end: "bottom top",
-                toggleActions: "play pause resume none",
-              }
-             } // to values
-          );
+          <div className="relative mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <a
+              href="mailto:tanjiravalidator@gmail.com"
+              className="inline-flex w-full items-center justify-center rounded-md bg-[#ff9157] px-8 py-3 font-headline text-sm font-bold uppercase tracking-wide text-[#260f00] transition-all hover:shadow-[0_0_24px_rgba(255,145,87,0.35)] sm:w-auto"
+            >
+              Get in Touch
+            </a>
+            <a
+              href="mailto:tanjiravalidator@gmail.com"
+              className="inline-flex w-full items-center justify-center rounded-md border border-white/20 px-8 py-3 font-headline text-sm font-bold text-[#e9e6f7] transition-all hover:bg-white/5 sm:w-auto"
+            >
+              tanjiravalidator@gmail.com
+            </a>
+          </div>
 
-          gsap.fromTo(smallTextcont.current, 
-            { x: 100, opacity: 0 }, // from values
-            { x: 0, opacity: 1, duration: 2, ease: "power1.inOut",
-              scrollTrigger: {
-                trigger: smallTextcont.current, // element to trigger animation
-                start: "top 80%",
-                end: "bottom top",
-                toggleActions: "play pause resume none",
-              }
-             } // to values
-          );
-
-          gsap.fromTo(emailcont.current, 
-            { x: 100, opacity: 0 }, // from values
-            { x: 0, opacity: 1, duration: 1.5, ease: "power1.inOut",
-              scrollTrigger: {
-                trigger: emailcont.current, // element to trigger animation
-                start: "top 80%",
-                end: "bottom top",
-                toggleActions: "play pause resume none",
-              }
-             } // to values
-          );
-
-          gsap.fromTo(phonecont.current, 
-            { x: 100, opacity: 0 }, // from values
-            { x: 0, opacity: 1, duration: 2, ease: "power1.inOut",
-              scrollTrigger: {
-                trigger: phonecont.current, // element to trigger animation
-                start: "top 80%",
-                end: "bottom top",
-                toggleActions: "play pause resume none",
-              }
-             } // to values
-          );
-
-          socialsCont.current.forEach((link, index) => {
-            // Calculate a unique duration based on the index or any other factor
-            const duration = 0.5 + index * 0.2; // Example: increase duration by 0.2s for each card
-            
-            gsap.fromTo(link, 
-              { x: 100, opacity: 0 }, // from values
-              { x: 0, opacity: 1, duration: duration, ease: "power1.inOut",
-                scrollTrigger: {
-                  trigger: link, // element to trigger animation
-                  start: "top 80%",
-                  end: "bottom top",
-                  toggleActions: "play pause resume none",
-                }
-              } // to values
-            );
-          });
-    
-    }, []);
-    
-    return ( 
-        <section id="contact" className="p-5 py-10 bg-transparent flex items-center justify-center scroll-smooth">
-            <div className="mx-auto text-[#3c2848] w-[80%] md:w-[60vw]">
-                <h2 className="font-extrabold text-5xl md:text-7xl lg:text-9xl py-3 tracking-wide" ref={mainTextcont}>GET <br /> IN <span className="px-2 py-0 md:px-2 md:py-0 bg-orange-500 text-white font-extrabold rounded">TOUCH</span> WITH US</h2>
-                <p className="text-[#3c2848] text-sm md:text-base text-start w-[60vw] md:w-[40vw] py-4" ref={smallTextcont}>Tanjira are highly active in the communities we operate in. We are available 24/7 and provide free support helping community in ofﬁcial chats</p>
-                <ul className="px-4 py-2 list-disc my-4">
-                    <li className="text-[#3c2848] text-base text-start py-1 flex items-center justify-start" ref={emailcont}><MdMarkEmailRead className="text-2xl" /> <a href="mailto:tanjiravalidator@gmail.com" className="px-2 text-base md:text-xl font-bold uppercase">tanjiravalidator@gmail.com</a></li>
-                    {/* <li className="text-[#3c2848] text-base text-start py-1 flex items-center justify-start" ref={phonecont}><FaPhoneSquareAlt className="text-2xl" /> <a href="call: 07051242451" className="px-2 text-base md:text-xl font-bold uppercase">+2347051242451</a></li> */}
-                </ul>
-                <div className="gap-2 flex flex-wrap">
-                    {
-                        socials.map((social, index) => (
-                            <a className="mx-2 cursor-pointer font-bold" href={social.link} key={index} ref={el => socialsCont.current[index] = el} target="_blank">{social.icon}</a>
-                        ))
-                    }
-                </div>
-            </div>
-            
-        </section>
-     );
+          <div className="relative mt-8 flex items-center justify-center gap-3">
+            {socials.map((social, index) => (
+              <a
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-[#0d0d18]/70 text-[#e9e6f7] transition-all hover:border-[#81ecff]/50 hover:text-[#81ecff]"
+                href={social.link}
+                key={index}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {social.icon}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
  
 export default Contact;

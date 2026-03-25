@@ -1,180 +1,92 @@
-import homesvg from '../assets/head1_svg.svg'
+import homesvg from '../assets/head1_svg.svg';
 import logo from '../assets/tanjira_logo.svg';
-import { FaStarOfLife } from "react-icons/fa";
 import Services from '../components/Services';
 import Benefits from '../components/Benefits';
 import Networks from '../components/Networks';
 import Contact from '../components/Contact';
-import { useRef, useEffect } from 'react';
-import {gsap, Power1} from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(Power1);
-
-// window.addEventListener('scroll', window.scroll({
-//     behavior: 'smooth'
-// }))
 const Home = () => {
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
-
-  window.addEventListener('load', ()=> {
-    scrollToTop();
-  })
-
-    // const [counters, setCounters] = useState([0, 0]);
-    const countersRefs = [useRef(null), useRef(null)];
-  
-    // const finalValues = [1, 99]; // Final values for each counter
-  
-    // useEffect(() => {
-    //   const observer = new IntersectionObserver(
-    //     (entries) => {
-    //       entries.forEach((entry, index) => {
-    //         if (entry.isIntersecting) {
-    //           let currentCount = 0;
-    //           const countInterval = setInterval(() => {
-    //             if (currentCount === finalValues[index]) {
-    //               clearInterval(countInterval);
-    //             } else {
-    //               currentCount += 1;
-    //               setCounters((prevCounters) => {
-    //                 const updatedCounters = [...prevCounters];
-    //                 updatedCounters[index] = currentCount;
-    //                 return updatedCounters;
-    //               });
-    //             }
-    //           }, 10);
-    //         }
-    //       });
-    //     },
-    //     { threshold: 1 } // Adjust threshold as needed
-    //   );
-  
-    //   countersRefs.forEach((ref) => {
-    //     if (ref.current) {
-    //       observer.observe(ref.current);
-    //     }
-    //   });
-  
-    //   return () => {
-    //     countersRefs.forEach((ref) => {
-    //       if (ref.current) {
-    //         observer.unobserve(ref.current);
-    //       }
-    //     });
-    //   };
-    // }, []);
-
-    const mainText1 = useRef(null);
-    const counterAni = useRef(null);
-    const imageAni = useRef(null);
-    const textAni = useRef(null);
-    const maqueeAni = useRef(null);
-
-
-
-    useEffect(() => {
-      
-    gsap.fromTo(mainText1.current, 
-      { y: 50, opacity: 0, stagger: 0.5 }, // from values
-      { y: 0, opacity: 1, duration: 2, stagger: 0.5, ease: "power1.inOut" } // to values
-    );
-
-    gsap.fromTo(counterAni.current, 
-      { x: -100, opacity: 0 }, // from values
-      { x: 0, opacity: 1, duration: 2, ease: "power1.inOut",
-        scrollTrigger: {
-          trigger: counterAni.current, // element to trigger animation
-          start: "top 60%",
-          end: "bottom top",
-          toggleActions: "play pause resume none",
-        }
-       } // to values
-    );
-
-    gsap.fromTo(textAni.current, 
-      { x: 100, opacity: 0 }, // from values
-      { x: 0, opacity: 1, duration: 2, ease: "power1.inOut",
-        scrollTrigger: {
-          trigger: textAni.current, // element to trigger animation
-          start: "top 80%",
-          end: "bottom top",
-          toggleActions: "play pause resume none",
-        }
-       } // to values
-    );
-
-    }, [])
-    
-    
-    return ( 
-        <section className="w-full h-fit scroll-smooth overflow-x-hidden">
-            <div className="w-full h-fit py-10">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#3c2848] uppercase text-center tracking-wider" ref={mainText1}>
-                    Earn<br /> <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#ff9e01] via-[#6f1112] to-[#fc210d]">Staking rewards</span> <br />
-                    through non-custodial staking <br />
-                    and Web3 infrastructure.
-                </h1>
-            </div>
-            <div className="w-full h-fit flex flex-col-reverse md:flex-wrap md:flex-row items-center justify-around p-3">
-                <div className="flex flex-col items-center justify-center" ref={counterAni}>
-                    <div className="p-10 rounded-lg flex flex-col items-center justify-center border-[1px] border-black/5 bg-gray-500/10 my-3">
-                        <h1 className='text-[#3c2848] text-4xl md:text-5xl lg:text-5xl' ref={countersRefs[0]}>3+</h1>
-                        <p className='text-gray-500 text-base'>NETWORKS</p>
-                    </div>
-                    <div className="p-10 rounded-lg flex flex-col items-center justify-center border-[1px] border-black/5 bg-gray-500/10">
-                      <h1 className='text-[#3c2848] text-4xl md:text-5xl lg:text-5xl' ref={countersRefs[1]}>99%</h1>
-                      <p className='text-gray-500 text-base'>UP TIME</p>
-                    </div>
-                </div>
-                <div className='flex items-center justify-center my-4 md:my-0' ref={imageAni}>
-                    <img src={homesvg} loading='lazy' alt="An NFT statue" className='w-[80%] md:w-[40vw]' />
-                </div>
-                <div className='flex flex-col items-center md:items-start justify-center md:w-[20vw]' ref={textAni}>
-                    <p className='text-base text-center md:text-left'>Our professional staking services support the future of decentralised blockchains.</p>
-                    <a href="#contact" className='bg-gradient-to-r from-[#ff9e01] via-[#6f1112] to-[#fc210d] p-3 rounded-3xl cursor-pointer text-center text my-2 text-white font-bold hover:shadow-lg hover:px-4 hover:delay-100 ease-in-out'><span>Get Started</span></a>
-                </div>
+  return (
+    <section className='overflow-x-hidden'>
+      <header id='home' className='relative min-h-screen px-4 pb-20 pt-28 md:px-8'>
+        <div className='mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-12 lg:grid-cols-2'>
+          <div className='space-y-7'>
+            <div className='inline-flex rounded-full border border-white/15 bg-[#1e1e2d]/45 px-4 py-1.5 backdrop-blur-xl'>
+              <span className='font-label text-[11px] uppercase tracking-[0.2em] text-[#81ecff]'>Validator Node Operations</span>
             </div>
 
-            <div className="pointer-events-none relative flex gap-10 overflow-hidden bg-black/10 py-2 my-20 h-[10vh] lg:h-[15vh] -skew-y-6" ref={maqueeAni}>
-                <div className="animate-marquee flex min-w-full shrink-0 items-center justify-around gap-10 text-[#3c2848] font-bold">
-                <h3 className='text-2xl'>BLOCKCHAIN</h3>
-                {/* <FaStarOfLife className='font-bold text-3xl text-orange-600 px-3 w-10' />
-                <h3 className='text-2xl'>WEB3</h3> */}
-                <FaStarOfLife className='font-bold text-3xl text-orange-600 px-3 w-10' />
-                <h3 className='text-2xl'>dPoS</h3>
-                {/* <FaStarOfLife className='font-bold text-3xl text-orange-600 px-3 w-10' />
-                <h3 className='text-2xl'>VERIFICATION</h3> */}
-                <FaStarOfLife className='font-bold text-3xl text-orange-600 px-3 w-10' />
-                <h3 className='text-2xl'>LEARNING</h3>
-                <FaStarOfLife className='font-bold text-3xl text-orange-600 px-3 w-10' />
-                <h3 className='text-2xl'>EARNING</h3>
-                </div>
+            <h1 className='font-headline text-5xl font-bold leading-[0.95] tracking-[-0.03em] text-[#e9e6f7] md:text-7xl lg:text-8xl'>
+              Earn
+              <br />
+              <span className='bg-gradient-to-r from-[#ff9157] to-[#aa8aff] bg-clip-text text-transparent'>Staking rewards</span>
+            </h1>
+
+            <p className='max-w-xl text-lg leading-relaxed text-[#aba9b9] md:text-xl'>
+              Through non-custodial staking and Web3 infrastructure.
+            </p>
+
+            <div className='flex flex-wrap gap-4 pt-2'>
+              <a
+                href='#contact'
+                className='rounded-md bg-[#ff9157] px-8 py-3.5 font-headline text-sm font-bold uppercase tracking-wide text-[#280f00] transition-all hover:shadow-[0_0_28px_rgba(255,145,87,0.35)]'
+              >
+                Get Started
+              </a>
+              <a
+                href='#services'
+                className='rounded-md border border-[#81ecff]/70 px-8 py-3.5 font-headline text-sm font-bold uppercase tracking-wide text-[#81ecff] transition-all hover:bg-[#81ecff]/10'
+              >
+                Learn More
+              </a>
             </div>
-            <Services />
-            <Benefits />
-            <Networks />
-            <Contact />
-            <footer className='w-full flex flex-col items-center justify-center p-3'>
-                <div className='flex items-center justify-between w-[90%]'>
-                    <div className='flex items-end justify-center'>
-                        <img src={logo} alt="Tanjira's Logo." className='w-[40px] md:w-[50px] lg:w-[50px]' />
-                        <h1 className='text-[#3c2848] font-extrabold text-lg md:text-xl lg:text-2xl'>TANJIRA</h1>
-                    </div>
-                    <p className='text-[#3c2848] text-xs md:text-sm font-bold w-[30%] md:w-[20%]'>Our professional staking services support the future of decentralised blockchain.</p>
-                </div>
-                <hr className='w-[90%] h-[3px] bg-[#3c2848] opacity-40 rounded-lg my-4' />
-                <h5 className='text-[#3c2848] text-base text-center uppercase'>© tanjira 2024</h5>
-            </footer>
-        </section>
-     );
-}
- 
+          </div>
+
+          <div className='relative mx-auto flex h-[340px] w-[320px] items-center justify-center md:h-[520px] md:w-[520px]'>
+            <div className='absolute inset-12 rounded-[2rem] bg-[#81ecff]/10 blur-[70px]' />
+            <div className='absolute inset-6 rotate-12 rounded-[2rem] border border-white/10 bg-[#1e1e2d]/40 backdrop-blur-2xl' />
+            <div className='absolute inset-6 -rotate-6 rounded-[2rem] border border-white/5 bg-[#12121e]/70' />
+            <div className='relative z-10 flex h-36 w-36 items-center justify-center rounded-3xl bg-[#0d0d18]/70 backdrop-blur-md md:h-48 md:w-48'>
+              <img src={logo} alt='Tanjira emblem' className='h-20 w-20 md:h-28 md:w-28' />
+            </div>
+            <img
+              src={homesvg}
+              alt='Abstract architectural visual'
+              className='absolute bottom-0 right-0 h-40 w-40 opacity-40 md:h-56 md:w-56'
+            />
+          </div>
+        </div>
+
+        <div className='absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2'>
+          <span className='font-label text-[10px] uppercase tracking-[0.25em] text-[#aba9b9]'>Scroll to Explore</span>
+          <div className='h-12 w-px bg-gradient-to-b from-[#ff9157] to-transparent' />
+        </div>
+      </header>
+
+      <Services />
+      <Benefits />
+      <Networks />
+      <Contact />
+
+      <footer className='bg-[#12121e]'>
+        <div className='mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-8 px-4 py-14 md:flex-row md:px-8'>
+          <div className='space-y-3 text-center md:text-left'>
+            <div className='flex items-center justify-center gap-2 md:justify-start'>
+              <img src={logo} alt='Tanjira logo' className='h-9 w-9' />
+              <h3 className='font-headline text-xl font-bold'>Tanjira</h3>
+            </div>
+            <p className='max-w-sm text-sm text-[#aba9b9]'>© 2026 Tanjira. Synthetic Architectures for Web3.</p>
+          </div>
+
+          <div className='flex flex-wrap items-center justify-center gap-6'>
+            <a href='#' className='font-label text-[11px] uppercase tracking-[0.16em] text-[#aba9b9] transition-colors hover:text-[#ff9157]'>Privacy Policy</a>
+            <a href='#' className='font-label text-[11px] uppercase tracking-[0.16em] text-[#aba9b9] transition-colors hover:text-[#ff9157]'>Terms of Service</a>
+            <a href='#' className='font-label text-[11px] uppercase tracking-[0.16em] text-[#aba9b9] transition-colors hover:text-[#ff9157]'>Docs</a>
+            <a href='#' className='font-label text-[11px] uppercase tracking-[0.16em] text-[#aba9b9] transition-colors hover:text-[#ff9157]'>Status</a>
+          </div>
+        </div>
+      </footer>
+    </section>
+  );
+};
+
 export default Home;

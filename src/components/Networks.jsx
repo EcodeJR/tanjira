@@ -1,129 +1,67 @@
-import jackal from '../assets/jackal.svg';
-// import chihuahua from '../assets/chihuahua.svg';
-import evmos from '../assets/evmos.svg';
-// import firmachain from '../assets/firmachain.svg';
-import juno from '../assets/juno.svg';
-import atomone from '../assets/atomone_.png';
-// import ki from '../assets/ki.svg';
-// import nois from '../assets/nois.svg';
-// import omniflix from '../assets/omniflix.svg';
-// import stargaze from '../assets/stargaze.svg';
-import passage from '../assets/passage_logo.svg';
-import { useRef, useEffect } from 'react';
-import {gsap, Power1} from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { MdRocketLaunch, MdArchitecture, MdAdd } from 'react-icons/md';
+import { TbGrain } from 'react-icons/tb';
 
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(Power1);
-
-let cards = [
+const cards = [
     {
         name: 'Jackal',
-        image: jackal,
-        description: 'Jackal is a blockchain that delivers decentralized data storage to individuals, businesses, and other blockchains.'
+        status: 'Active',
+        icon: MdRocketLaunch,
     },
     {
         name: 'Passage',
-        image: passage,
-        description: 'Making virtual more human. World-class virtual experiences on any device—No downloads, no apps, no compromises.'
+        status: 'Inactive',
+        icon: MdArchitecture,
     },
     {
         name: 'AtomOne',
-        image: atomone,
-        description: 'AtomOne is a community-driven, constitutionally governed blockchain designed to prioritize security, decentralization, and innovation.'
+        status: 'Active',
+        icon: TbGrain,
     },
     {
-        name: 'Evmos',
-        image: evmos,
-        description: 'Evmos is bringing the world of Ethereum-based applications and assets to the interoperable networks of the Cosmos ecosystem.'
+        name: 'More Soon',
+        status: 'Developing',
+        icon: MdAdd,
     },
-    // {
-    //     name: 'Juno',
-    //     image: juno,
-    //     description: 'The first permissionless smart-contract platform in the Cosmos. Juno is community owned and governed through SubDAO`&apos`s on DAODAO.'
-    // },
-    // {
-    //     name: 'Stargaze',
-    //     image: stargaze,
-    //     description: 'The go-to NFT platform in the Cosmos. Open, Permissionless and the home of Bad Kids the world over.'
-    // },
-    // {
-    //     name: 'Omniflixhub',
-    //     image: omniflix,
-    //     description: 'Mint, manage & distribute media assets, across multiple chains powered by NFTs, with extensible rights for fractionalization of ownership and increased distribution.'
-    // },
-    // {
-    //     name: 'Firmachain',
-    //     image: firmachain,
-    //     description: 'A multipurpose cosmos-sdk smart-contract enabled blockchain. Firmachain is targeted towards businesses wanting to build blockchain based products.'
-    // },
-    // {
-    //     name: 'Ki Chain',
-    //     image: ki,
-    //     description: 'Ki aims to bridge DeFi and CeFi with its Klub investor platform.'
-    // },
-    // {
-    //     name: 'Chihuahua',
-    //     image: chihuahua,
-    //     description: 'Chihuahua is the first interoperable layer-1 meme coin in the Cosmos, and supercharged with smart-contracts.'
-    // },
-    // {
-    //     name: 'Nois',
-    //     image: nois,
-    //     description: 'Nois protocol is a public good chain that provides reliable randomness to blockchain developers, derived from the drand beacon provided by the league of entropy.'
-    // },
-]
-
+];
 
 const Networks = () => {
-    const netCard = useRef([]);
+    return (
+        <section id='networks' className='relative overflow-hidden bg-[#12121e] px-4 py-24 md:px-8'>
+            <div className='absolute -right-20 top-4 h-72 w-72 rounded-full bg-[#aa8aff]/10 blur-[80px]' />
 
-    useEffect(() => {
-        netCard.current.forEach((card, index) => {
-          // Calculate a unique duration based on the index or any other factor
-          const duration = 0.5 + index * 0.2; // Example: increase duration by 0.2s for each card
-          
-          gsap.fromTo(card, 
-            { y: 100, opacity: 0 }, // from values
-            { y: 0, opacity: 1, duration: duration, ease: "power1.inOut",
-              scrollTrigger: {
-                trigger: card, // element to trigger animation
-                start: "top 80%",
-                end: "bottom top",
-                toggleActions: "play pause resume none",
-              }
-            } // to values
-          );
-        });
-      }, []);
-    
-    return ( 
-        <section id="networks" className="p-5 bg-transparent scroll-smooth">
-            <h2 className="font-bold text-4xl md:text-4xl lg:text-6xl text-[#3c2848] text-center tracking-wide uppercase">Our Networks</h2>
-            {/*network cards container*/}
-            <div className="w-full py-10 px-5 flex flex-wrap items-start justify-evenly gap-5">
-                {/*----------network cards--------*/}
-                {
-                    cards.map((card, index) => (
-                        <div className={`bg-[#3c2848] rounded-md text-white flex flex-col flex-grow items-start justify-around p-3 min-h-[25vh] h-full w-[80%] md:max-w-[30vw] lg:max-w-[20vw] relative ${index > 2 ? "before:absolute before:top-0 before:left-0 before:z-20 before:h-full before:w-full before:bg-black/70 before:rounded-md" : "blur-0"}`} key={index} ref={el => netCard.current[index] = el}>
-                            <h2 className={`${index > 2 ? "text-xl text-center text-white opacity-100 z-20 font-bold mx-auto absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] animate-pulse" : "opacity-0"}`}>COMING SOON</h2>
-                            <img 
-                                src={card.image} 
-                                alt={`${card.name} logo`} 
-                                className={`w-[20vw] md:w-[7vw] ${index > 2 ? "blur-lg" : "blur-0"}`} 
-                            />
+            <div className='relative mx-auto w-full max-w-7xl'>
+                <div className='mb-14 text-center'>
+                    <h2 className='font-label text-xs uppercase tracking-[0.22em] text-[#81ecff]'>Integrations</h2>
+                    <h3 className='mt-3 font-headline text-4xl font-bold tracking-tight text-[#e9e6f7] md:text-5xl'>Supported Ecosystems</h3>
+                </div>
 
-                            <div className={`p-2 ${index > 2 ? "blur-lg" : "blur-0"}`}>
-                                <h5 className="text-2xl font-extrabold py-2">{card.name}</h5>
-                                <p className="text-base md:text-sm text-gray-300">{card.description}</p>
+                <div className='grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4'>
+                    {cards.map((card, index) => (
+                        (() => {
+                            const Icon = card.icon;
+
+                            return (
+                        <article
+                            key={card.name}
+                            className={`rounded-2xl p-6 text-center transition-all ${
+                                index === cards.length - 1
+                                    ? 'border border-dashed border-white/20 bg-[#1e1e2d]/45'
+                                    : 'border border-transparent bg-[#1e1e2d] hover:-translate-y-1 hover:border-white/15'
+                            }`}
+                        >
+                            <div className='mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-xl bg-[#0d0d18]'>
+                                <Icon className='text-3xl text-[#aba9b9]' />
                             </div>
-                        </div>
-                    ))
-                }
-                
+                            <h4 className='font-headline text-lg font-bold text-[#e9e6f7]'>{card.name}</h4>
+                            <p className='mt-2 font-label text-[10px] uppercase tracking-[0.18em] text-[#aba9b9]'>{card.status}</p>
+                        </article>
+                            );
+                        })()
+                    ))}
+                </div>
             </div>
         </section>
-     );
-}
- 
+    );
+};
+
 export default Networks;
