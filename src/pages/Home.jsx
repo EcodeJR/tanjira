@@ -76,7 +76,7 @@ const Home = () => {
               <img src={logo} alt='Tanjira logo' className='h-9 w-9' />
               <h3 className='font-headline text-xl font-bold'>Tanjira</h3>
             </div>
-            <p className='max-w-sm text-sm text-[#aba9b9]'>© 2026 Tanjira. Synthetic Architectures for Web3.</p>
+            <p className='max-w-sm text-sm text-[#aba9b9]'>© 2026 Tanjira.</p>
           </div>
 
           <div className='flex flex-wrap items-center justify-center gap-6'>

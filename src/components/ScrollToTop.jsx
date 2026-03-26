@@ -34,7 +34,7 @@ function BackToTopButton() {
     <>
       {isVisible && (
         <button className="fixed z-50 bottom-10 lg:bottom-2 right-5 p-5 lg:p-4 rounded-full shadow-lg animate-bounce bg-black/20" onClick={scrollToTop}>
-          <BsArrowUp className='font-bold text-[#3c2848] text-2xl text-secondary' />
+          <BsArrowUp className='font-bold text-[#ff9157] text-2xl text-secondary' />
         </button>
       )}
     </>
